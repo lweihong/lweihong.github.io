@@ -3,39 +3,39 @@
 <head>
   <meta charset="utf-8">
   
-  <title>数组 | 廖卫红</title>
+  <title>jQuery选择器 | 廖卫红</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="数组可以用来存储多个数据
-数组的声明方式：
+  <meta name="description" content="什么是jQuery？
+jquery的官网：http://jquery.com/
+jQuery就是一个js库，使用jQuery的话，会比使用JavaScript更简单。
+js库：把一些常用到的方法写到一个单独的js文件，使用的时候直接去引用这js文件就可以了。
 
-1234var arr = [1,2,3];      var arr = new Array(1,2,3);var arr = new Array(3) //输入一个数值表示设定默认长度,但并不能限制数组的长度；//综上所述，我们使用var arr = [];
 
-数组中的每一个数据我们称为元素;
-由于js是弱类型，一个可以存储不同类型的元素.
-一般">
+学习jQuery，主要学习jQuery的一大堆的api。
+API：application programming interface：">
 <meta property="og:type" content="article">
-<meta property="og:title" content="数组">
-<meta property="og:url" content="http://yoursite.com/2016/10/18/数组/index.html">
+<meta property="og:title" content="jQuery选择器">
+<meta property="og:url" content="http://yoursite.com/2016/10/13/jQuery选择器篇/index.html">
 <meta property="og:site_name" content="廖卫红">
-<meta property="og:description" content="数组可以用来存储多个数据
-数组的声明方式：
+<meta property="og:description" content="什么是jQuery？
+jquery的官网：http://jquery.com/
+jQuery就是一个js库，使用jQuery的话，会比使用JavaScript更简单。
+js库：把一些常用到的方法写到一个单独的js文件，使用的时候直接去引用这js文件就可以了。
 
-1234var arr = [1,2,3];      var arr = new Array(1,2,3);var arr = new Array(3) //输入一个数值表示设定默认长度,但并不能限制数组的长度；//综上所述，我们使用var arr = [];
 
-数组中的每一个数据我们称为元素;
-由于js是弱类型，一个可以存储不同类型的元素.
-一般">
-<meta property="og:updated_time" content="2016-10-23T06:39:36.897Z">
+学习jQuery，主要学习jQuery的一大堆的api。
+API：application programming interface：">
+<meta property="og:updated_time" content="2016-10-23T07:53:29.105Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="数组">
-<meta name="twitter:description" content="数组可以用来存储多个数据
-数组的声明方式：
+<meta name="twitter:title" content="jQuery选择器">
+<meta name="twitter:description" content="什么是jQuery？
+jquery的官网：http://jquery.com/
+jQuery就是一个js库，使用jQuery的话，会比使用JavaScript更简单。
+js库：把一些常用到的方法写到一个单独的js文件，使用的时候直接去引用这js文件就可以了。
 
-1234var arr = [1,2,3];      var arr = new Array(1,2,3);var arr = new Array(3) //输入一个数值表示设定默认长度,但并不能限制数组的长度；//综上所述，我们使用var arr = [];
 
-数组中的每一个数据我们称为元素;
-由于js是弱类型，一个可以存储不同类型的元素.
-一般">
+学习jQuery，主要学习jQuery的一大堆的api。
+API：application programming interface：">
   
     <link rel="alternative" href="/atom.xml" title="廖卫红" type="application/atom+xml">
   
@@ -253,11 +253,11 @@
         </header>                
     </div>
 </nav>
-      <div class="body-wrap"><article id="post-数组" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-jQuery选择器篇" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/10/18/数组/" class="article-date">
-      <time datetime="2016-10-18T01:37:16.000Z" itemprop="datePublished">2016-10-18</time>
+      <a href="/2016/10/13/jQuery选择器篇/" class="article-date">
+      <time datetime="2016-10-13T08:49:40.000Z" itemprop="datePublished">2016-10-13</time>
 </a>
     </div>
   
@@ -270,7 +270,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      数组
+      jQuery选择器
     </h1>
   
 
@@ -281,7 +281,7 @@
 
         
     <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript基础篇/">JavaScript基础篇</a></li></ul>
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/jQuery基础篇/">jQuery基础篇</a></li></ul>
     </div>
 
         <div class="clearfix"></div>
@@ -292,59 +292,125 @@
       
           
         <ul>
-<li>数组可以用来存储多个数据</li>
-<li>数组的声明方式：</li>
+<li>什么是jQuery？<ul>
+<li>jquery的官网：<a href="http://jquery.com/" target="_blank" rel="external">http://jquery.com/</a></li>
+<li>jQuery就是一个js库，使用jQuery的话，会比使用JavaScript更简单。</li>
+<li>js库：把一些常用到的方法写到一个单独的js文件，使用的时候直接去引用这js文件就可以了。</li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">var arr = [1,2,3];</div><div class="line">      var arr = new Array(1,2,3);</div><div class="line">var arr = new Array(3) //输入一个数值表示设定默认长度,但并不能限制数组的长度；</div><div class="line">//综上所述，我们使用var arr = [];</div></pre></td></tr></table></figure>
+</li>
+<li>学习jQuery，主要学习jQuery的一大堆的api。<ul>
+<li>API：application programming interface：应用程序编程接口，说白了，API就是方法。</li>
+<li>注意：方法调用的时候，都带小括号(),使用jQuery的方法的时候，不要忘了小括号（）；</li>
+</ul>
+</li>
+<li>怎样使用jQuery？<ul>
+<li>官网下载地址：<a href="http://jquery.com/download/" target="_blank" rel="external">http://jquery.com/download/</a></li>
+<li>下载时候有一个压缩版本（产品上线时用），一个未压缩版本（开发用）；</li>
+</ul>
+</li>
+<li><p>使用jQuery实现div动态展示案例的步骤：</p>
 <ul>
-<li>数组中的每一个数据我们称为元素;<ul>
-<li>由于js是弱类型，一个可以存储不同类型的元素.</li>
-<li>一般不推荐在数组中保存多个类型的数据.</li>
+<li><p>1)引包（引入jQuery文件）</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;script src=&quot;jquery-1.11.1.js&quot;&gt;&lt;/script&gt;</div></pre></td></tr></table></figure>
+</li>
+<li><p>2)入口函数</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">  	$(document).ready(function () &#123;</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+</li>
+<li><p>3)功能实现</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">  	$(&quot;#btnShowDiv&quot;).click(function () &#123;</div><div class="line">	$(&quot;div&quot;).show(1000);</div><div class="line">&#125;);</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+</li>
 </ul>
 </li>
-<li>数组的长度属性: <code>arr.length</code>数组中元素的个数;</li>
-<li><p>数组的索引</p>
+<li><p>JavaScript与jQuery对比</p>
 <ul>
-<li>数组中的元素是按照索引排列的，索引从左往右计算，第一位为0;<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">arr[0] = 1;  //将数组的第一项赋值为1；</div><div class="line">arr[“0”] = 1;	// 跟上一个方式相同</div></pre></td></tr></table></figure>
-</li>
+<li>JavaScript：<br>  入口函数，只能有一个，如果有多个，后面的会覆盖前面；<br>  代码容错性差，代码出现错误，会影响到后面代码的运行。<br>  浏览器兼容性差，比如火狐不支持innerText；<br>  DOM操作复杂，对于一些简单的动画效果，实现起来比较麻烦。</li>
+<li>jQuery：<br>  入口函数，可以有多个，并且不会发生覆盖的情况<br>  代码容错性好，屏蔽错误，并且不会影响后面代码的运行。<br>  对浏览器兼容性做了封装，因此不存在兼容性问题<br>  DOM操作简单，支持隐式迭代，实现动画非常简单。</li>
 </ul>
 </li>
-<li><p>数组遍历</p>
-  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">for(var i = 0; i &lt; arr.lenght; i++)&#123;</div><div class="line">  		// i 相当于arr数组的索引值，i从0 开始,</div><div class="line">      	// 最大值为数组中最后一项的索引值arr.length-1;</div><div class="line">      console.log(arr[i]);</div><div class="line"> 	 &#125;</div></pre></td></tr></table></figure>
+<li><p>版本介绍</p>
 <ul>
-<li>向数组最后添加一个新元素索引值为arr.length   arr[arr.length];</li>
-<li>数组的长度是随着数组元素的增减而增减的。</li>
-<li>数组的长度可以进行设置，如果设置的长度大于数组元素个数，不影响内容，多出的部分值为                <code>undefined</code>,如果设置的长度小于了元素实际个数，超出的部分元素会被删除。</li>
+<li>jquery大版本分为1.x和2.x（3.0）</li>
+<li>区别：2.x版本不再支持IE6/7/8。</li>
+<li>jQuery每一个版本又分为压缩版和未压缩版：<br>jQuery.js：未压缩版本（开发版本），代码可读性高，推荐在开发和学习阶段使用，方便查看源代码。<br>jQuery.min.js：压缩版本，去除了注释、换行、空格、并且将一些变量替换成了a,b,c之类的简单字符，基本没有可读性，推荐在项目生产环境使用，因为文件较小，减少网络压力。</li>
 </ul>
 </li>
-<li><p>数组的类型</p>
+<li><p>jQuery入口函数的两种写法:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"> 		//第一种写法</div><div class="line">$(document).ready(function() &#123;	</div><div class="line">         </div><div class="line">&#125;);</div><div class="line">         </div><div class="line">//第二种写法</div><div class="line">$(function() &#123;</div><div class="line">	</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+</li>
+<li><p>对比JavaScript的入口函数jQuery的入口函数,执行时机:<br>1.JavaScript的入口函数要等到页面中所有资源（包括图片、文件）加载完成才开始执行。<br>2.jQuery的入口函数只会等待文档树加载完成就开始执行，并不会等待图片、文件的加载。</p>
+</li>
+<li><p>关于1.3.4jQuery的<code>$</code>符号:</p>
 <ul>
-<li>数组是一个复杂数据类型，通过typeof检测时得到object，不准确，我们可以通过下列方法去检测数组的类型。<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"> var arr = [1,2,3];</div><div class="line">console.log(typeof arr);//如果arr为数组，返回object;</div><div class="line">//相对常用</div><div class="line"> console.log(arr instanceof Array); //如果arr为数组，返回true,否则返回false;</div><div class="line">//ie9以下不支持</div><div class="line"> console.log(Array.isArray(arr)); //如果arr为数组，返回true,否则返回false;</div><div class="line">//第三种</div><div class="line"> console.log(Object.prototype.toString.call(arr)==&quot;[object Array]&quot;);	//返回字符串&quot;[object Array]&quot;；</div></pre></td></tr></table></figure>
+<li><code>$</code>就是一个函数：<code>$()</code>;参数不一样，功能不一样.</li>
+<li><code>$</code>常用的几种情况：<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">  	$(function() &#123;&#125;);//参数是function，说明是入口函数</div><div class="line">$(“#btnSetConent”);//参数是字符串，并且以#开头，是一个标签选择，</div><div class="line">      查找id=“btnSetContent”的元素</div><div class="line">$(“div”);//查找所有的div元素</div><div class="line">$(document).ready(funciton()&#123;&#125;)//将document转换成jQuery对象</div></pre></td></tr></table></figure>
 </li>
 </ul>
 </li>
-</ul>
+<li><p><code>=== jQuery</code>也就是说能用<code>$</code>的地方，完全可以用<code>jQuery，$</code>仅仅是简写形式。</p>
+</li>
+<li><p>jQuery对象与DOM对象之间的转换:</p>
 <ul>
-<li>基本数据类型和复杂数据类型的区别<ul>
-<li>直观区别，数据量不同。</li>
-<li>保存上的区别：<ul>
-<li>基本数据类型的值保存在栈中</li>
-<li>复杂数据类型的值保存在堆中</li>
-</ul>
+<li><p>什么是DOM对象？<br>使用JavaScript中的方法获取页面中的元素返回的对象就是dom对象。比如使用<code>document.getElement*</code>系列的方法返回的就是dom对象。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"> 		var btn = document.getElementById(“btnShowDiv”);</div><div class="line">var divs = document.getElementsByTagName(“div”);</div><div class="line">//dom对象只可以使用dom对象的方法和属性</div><div class="line">domObject.innerHTML = “dom对象设置文本”;</div><div class="line">domObject.style.display= “block”;//dom对象显示对象</div><div class="line">domObject.onclick = function() &#123;&#125;//dom对象绑定事件</div></pre></td></tr></table></figure>
 </li>
-<li>复制的区别：<ul>
-<li>基本数据类型复制的是栈中的值，在内存中开辟新区域，两者是完全独立的；</li>
-<li>复杂数据类型复制的是保存在栈中的指针，两个变量指向的是堆中的同一个区域；</li>
-</ul>
+<li><p>什么是jquery对象？<br>使用jquery的方法获取页面中的元素返回的对象就是jQuery对象。比如使用$()方法返回对象都是jquery对象。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"> 		$(“div”);//标签选择器返回的jquery对象。</div><div class="line">$(“#btnShowDiv”);//id选择器返回的jquery对象。</div><div class="line">//jquery对象只能使用jquery对象的方法</div><div class="line">var $obj = $(“div”);</div><div class="line">$obj.html(“jquery对象设置文本的方法”);</div><div class="line">$obj.show();//jquery对象显示文本</div><div class="line">$obj.click(function() &#123;&#125;);//jquery对象绑定事件</div></pre></td></tr></table></figure>
 </li>
 </ul>
 </li>
-<li><p>数组的复制<br>  *·由于数组是引用类型（复杂数据类型），复制的时候会出现问题，我们需要用特殊的复制方式。</p>
-  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"> var arr = [1,2,3];</div><div class="line">var arrNew =[];</div><div class="line">//遍历数组</div><div class="line">	for (var i = 0; i &lt; arr.length; i++) &#123;</div><div class="line">      		 //将数组中的每一项添加到新数组中</div><div class="line"> 			arrNew[arrNew.length] = arr[i];</div><div class="line"></div><div class="line"> &#125;</div><div class="line"></div><div class="line">	console.log(arr); 		//[1 ,2, 3]</div><div class="line">	console.log(arrNew);	 //[1 ,2, 3]</div></pre></td></tr></table></figure>
+<li><p>jQuery对象其实就是DOM对象的包装集（包装了DOM对象的集合）;</p>
 </li>
-<li><p>二维数组</p>
+<li><p>jQuery对象和DOM对象的相互转换:</p>
 <ul>
-<li>遍历二维数组<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">  	 <span class="keyword">var</span> arr = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,[<span class="number">6</span>,<span class="number">7</span>,<span class="number">8</span>]];</div><div class="line">  	<span class="built_in">console</span>.log(arr);   <span class="comment">//[1, 2, 3, 4, 5, Array[3]]</span></div><div class="line"> 	 <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; arr.length; i++) &#123;</div><div class="line">      <span class="keyword">var</span> current = arr[i];</div><div class="line"><span class="comment">// 判断当前项是否是数组</span></div><div class="line">      <span class="keyword">if</span>(current <span class="keyword">instanceof</span> <span class="built_in">Array</span>)&#123;</div><div class="line"><span class="comment">//  如果是数组，遍历</span></div><div class="line">          <span class="keyword">for</span> (<span class="keyword">var</span> j = <span class="number">0</span>; j &lt; current.length; j++) &#123;</div><div class="line"><span class="comment">//  依次打印每一个值</span></div><div class="line">              <span class="built_in">console</span>.log(current[j]);<span class="comment">//6 7 8</span></div><div class="line">          &#125;</div><div class="line">      &#125;<span class="keyword">else</span>&#123;</div><div class="line">          <span class="built_in">console</span>.log(current);<span class="comment">//1 2 3 4 5</span></div><div class="line">      	&#125;</div><div class="line">  &#125;</div></pre></td></tr></table></figure></li>
+<li><p>jquery对象转DOM对象:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">  	var $li = $(“li”);</div><div class="line">//第一种方法（推荐使用）</div><div class="line">$li[0];</div><div class="line">//第二种方法</div><div class="line">$li.get(0);</div><div class="line">//其实jQuery对象转DOM对象的实质就是取出jQuery对象中封装的DOM对象。</div></pre></td></tr></table></figure>
+</li>
+<li><p>DOM对象转jquery对象:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">  	var $obj = $(domObj);</div><div class="line">// $(document).ready(function()&#123;&#125;);就是典型的DOM对象转jQuery对象</div></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>区分jQuery和JavaScript:</p>
+<ul>
+<li>JavaScript是一门编程语言，我们用它来编写客户端浏览器脚本；jquery是用JavaScript实现的一个JavaScript库，把JavaScript里面常用的功能代码封装成一个文件，使用的时候直接引用即可，目的是提高我们的开发效率。</li>
+</ul>
+</li>
+<li><p>jQuery选择器</p>
+<ul>
+<li><p>jQuery选择器是jQuery为我们提供的一组方法，让我们更加方便的获取到页面中的元素。注意：jQuery选择器返回的是jQuery对象。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">  	$(&quot;#btnShowDiv&quot;)//id选择器</div><div class="line">$(&quot;div&quot;)//标签选择器</div></pre></td></tr></table></figure>
+</li>
+<li><p>jQuery选择器有很多，基本兼容了CSS1到CSS3所有的选择器，并且jQuery还添加了很多更加复杂的选择器，【可查看jQuery文档】；</p>
+</li>
+<li>jQuery选择器虽然很多，但是选择器之间可以相互替代，就是说获取一个元素，你会有很多种方法获取到。所以我们平时真正能用到的只是少数的最常用的选择器。</li>
+</ul>
+</li>
+<li>基本选择器<ul>
+<li>ID选择器    <code>$(“#id”);</code>    获取指定ID的元素</li>
+<li>类选择器    <code>$(“.class”);</code>    获取同一类<code>class</code>的元素</li>
+<li>标签选择器    <code>$(“div”);</code>    获取同一类标签的所有元素</li>
+<li>并集选择器    <code>$(“div,p,li”);</code>    使用逗号分隔，只要符合条件之一就可。获取所有的<code>div、p、li</code>元素</li>
+<li>交集选择器（标签指定式选择器）    <code>$(“div.redClass”)</code>;    注意选择器1和选择器2之间没有空格，<code>class</code>为<code>redClass</code>的<code>div</code>元素，注意区分后代选择器。</li>
+</ul>
+</li>
+<li>层级选择器<ul>
+<li>子代选择器<code>$(“ul&gt;li”);</code>使用&gt;号，获取儿子层级的元素，注意，并不会获取        孙子层级的元素</li>
+<li>后代选择器    $(“ul li”);    使用空格，代表后代选择器，获取ul下的所有li元素，包括孙子等;</li>
+</ul>
+</li>
+<li>过滤选择器<ul>
+<li><code>:eq（index）    $(“li:eq(2)”).css(“color”, ”red”);</code>获取到的    li元素中，选择索引号为2的元素，索引号index从0开始。</li>
+<li><code>:odd    $(“li:odd”).css(“color”, ”red”);</code>获取到的li元素中，选    择索引号为奇数的元素</li>
+<li><code>:even    $(“li:even”).css(“color”, ”red”);</code>获取到的li元素中，    选择索引号为偶数的元素</li>
+</ul>
+</li>
+<li>筛选选择器(方法)<ul>
+<li>筛选选择器的功能与过滤选择器有点类似，但是用法不一样，筛选选择器主要是方法。</li>
+<li><code>children(selector)    $(“ul”).children(“li”)</code>相当于            <code>$(“ul&gt;li”)</code>，子类选择器</li>
+<li><code>find(selector)    $(“ul”).find(“li”);</code>相当于<code>$(“ul li”),</code>后代选择器</li>
+<li><code>siblings(selector)    $(“#first”).siblings(“li”);</code>查找兄弟节点，不包括自己本身。</li>
+<li><code>parent()    $(“#first”).parent();</code>    查找父亲</li>
+<li><code>eq(index)    $(“li”).eq(2);</code>    相当于<code>$(“li:eq(2)”),index</code>从0开始</li>
 </ul>
 </li>
 </ul>
@@ -356,13 +422,13 @@
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/2016/10/18/数组/">数组</a></p>
+        <p><span>本文标题:</span><a href="/2016/10/13/jQuery选择器篇/">jQuery选择器</a></p>
         <p><span>文章作者:</span><a href="/" title="访问 weihong Liao 的个人博客">weihong Liao</a></p>
-        <p><span>发布时间:</span>2016年10月18日 - 09时37分</p>
-        <p><span>最后更新:</span>2016年10月23日 - 14时39分</p>
+        <p><span>发布时间:</span>2016年10月13日 - 16时49分</p>
+        <p><span>最后更新:</span>2016年10月23日 - 15时53分</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2016/10/18/数组/" title="数组">http://yoursite.com/2016/10/18/数组/</a>
-            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2016/10/18/数组/　　作者: weihong Liao" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <span>原始链接:</span><a class="post-url" href="/2016/10/13/jQuery选择器篇/" title="jQuery选择器">http://yoursite.com/2016/10/13/jQuery选择器篇/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2016/10/13/jQuery选择器篇/　　作者: weihong Liao" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script src="/js/clipboard.min.js"></script>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
@@ -375,18 +441,18 @@
 
 <nav id="article-nav">
   
-    <a href="/2016/10/19/jQuery事件/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2016/10/15/jQuery操作DOM-节点/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption"><</strong>
       <div class="article-nav-title">
         
-          jQuery事件
+          jQuery操作DOM(节点)
         
       </div>
     </a>
   
   
-    <a href="/2016/10/16/jQuery的DOM操作/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">jQuery的DOM操作</div>
+    <a href="/2016/10/13/JavaScript语句/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">JavaScript语句</div>
       <strong class="article-nav-caption">></strong>
     </a>
   
@@ -445,7 +511,7 @@
     
       <div class="duoshuo" id="comments">
     <!-- 多说评论框 start -->
-    <div class="ds-thread" data-thread-key="2016/10/18/数组/" data-title="数组" data-url="http://yoursite.com/2016/10/18/数组/"></div>
+    <div class="ds-thread" data-thread-key="2016/10/13/jQuery选择器篇/" data-title="jQuery选择器" data-url="http://yoursite.com/2016/10/13/jQuery选择器篇/"></div>
     <!-- 多说评论框 end -->
     <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
     <script type="text/javascript">
@@ -468,13 +534,13 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2016/10/19/jQuery事件/" title="上一篇: jQuery事件">
+            <a href="/2016/10/15/jQuery操作DOM-节点/" title="上一篇: jQuery操作DOM(节点)">
                 <i class="fa fa-angle-left"></i>
             </a>
         
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
         
-            <a href="/2016/10/16/jQuery的DOM操作/" title="下一篇: jQuery的DOM操作">
+            <a href="/2016/10/13/JavaScript语句/" title="下一篇: JavaScript语句">
                 <i class="fa fa-angle-right"></i>
             </a>
         

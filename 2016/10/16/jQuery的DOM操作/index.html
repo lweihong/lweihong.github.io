@@ -3,39 +3,36 @@
 <head>
   <meta charset="utf-8">
   
-  <title>数组 | 廖卫红</title>
+  <title>jQuery的DOM操作 | 廖卫红</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="数组可以用来存储多个数据
-数组的声明方式：
+  <meta name="description" content="jQuery操作属性
 
-1234var arr = [1,2,3];      var arr = new Array(1,2,3);var arr = new Array(3) //输入一个数值表示设定默认长度,但并不能限制数组的长度；//综上所述，我们使用var arr = [];
+设置单个属性：
+123456   //第一个参数：需要设置的属性名//第二个参数：对应的属性值attr(name, value);//用法举例$(“img”).attr(“title”,”hello,world”);$(“img”).attr(“alt”,“hello,world”);
 
-数组中的每一个数据我们称为元素;
-由于js是弱类型，一个可以存储不同类型的元素.
-一般">
+设置多个属性：
+12345678   //参数是一个对象，包含了需要设置的属性名和属">
 <meta property="og:type" content="article">
-<meta property="og:title" content="数组">
-<meta property="og:url" content="http://yoursite.com/2016/10/18/数组/index.html">
+<meta property="og:title" content="jQuery的DOM操作">
+<meta property="og:url" content="http://yoursite.com/2016/10/16/jQuery的DOM操作/index.html">
 <meta property="og:site_name" content="廖卫红">
-<meta property="og:description" content="数组可以用来存储多个数据
-数组的声明方式：
+<meta property="og:description" content="jQuery操作属性
 
-1234var arr = [1,2,3];      var arr = new Array(1,2,3);var arr = new Array(3) //输入一个数值表示设定默认长度,但并不能限制数组的长度；//综上所述，我们使用var arr = [];
+设置单个属性：
+123456   //第一个参数：需要设置的属性名//第二个参数：对应的属性值attr(name, value);//用法举例$(“img”).attr(“title”,”hello,world”);$(“img”).attr(“alt”,“hello,world”);
 
-数组中的每一个数据我们称为元素;
-由于js是弱类型，一个可以存储不同类型的元素.
-一般">
-<meta property="og:updated_time" content="2016-10-23T06:39:36.897Z">
+设置多个属性：
+12345678   //参数是一个对象，包含了需要设置的属性名和属">
+<meta property="og:updated_time" content="2016-10-23T07:52:27.485Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="数组">
-<meta name="twitter:description" content="数组可以用来存储多个数据
-数组的声明方式：
+<meta name="twitter:title" content="jQuery的DOM操作">
+<meta name="twitter:description" content="jQuery操作属性
 
-1234var arr = [1,2,3];      var arr = new Array(1,2,3);var arr = new Array(3) //输入一个数值表示设定默认长度,但并不能限制数组的长度；//综上所述，我们使用var arr = [];
+设置单个属性：
+123456   //第一个参数：需要设置的属性名//第二个参数：对应的属性值attr(name, value);//用法举例$(“img”).attr(“title”,”hello,world”);$(“img”).attr(“alt”,“hello,world”);
 
-数组中的每一个数据我们称为元素;
-由于js是弱类型，一个可以存储不同类型的元素.
-一般">
+设置多个属性：
+12345678   //参数是一个对象，包含了需要设置的属性名和属">
   
     <link rel="alternative" href="/atom.xml" title="廖卫红" type="application/atom+xml">
   
@@ -253,11 +250,11 @@
         </header>                
     </div>
 </nav>
-      <div class="body-wrap"><article id="post-数组" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-jQuery的DOM操作" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/10/18/数组/" class="article-date">
-      <time datetime="2016-10-18T01:37:16.000Z" itemprop="datePublished">2016-10-18</time>
+      <a href="/2016/10/16/jQuery的DOM操作/" class="article-date">
+      <time datetime="2016-10-16T04:48:29.000Z" itemprop="datePublished">2016-10-16</time>
 </a>
     </div>
   
@@ -270,7 +267,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      数组
+      jQuery的DOM操作
     </h1>
   
 
@@ -281,7 +278,7 @@
 
         
     <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript基础篇/">JavaScript基础篇</a></li></ul>
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/jQuery基础篇/">jQuery基础篇</a></li></ul>
     </div>
 
         <div class="clearfix"></div>
@@ -292,59 +289,71 @@
       
           
         <ul>
-<li>数组可以用来存储多个数据</li>
-<li>数组的声明方式：</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">var arr = [1,2,3];</div><div class="line">      var arr = new Array(1,2,3);</div><div class="line">var arr = new Array(3) //输入一个数值表示设定默认长度,但并不能限制数组的长度；</div><div class="line">//综上所述，我们使用var arr = [];</div></pre></td></tr></table></figure>
+<li><p>jQuery操作属性</p>
 <ul>
-<li>数组中的每一个数据我们称为元素;<ul>
-<li>由于js是弱类型，一个可以存储不同类型的元素.</li>
-<li>一般不推荐在数组中保存多个类型的数据.</li>
+<li><p>设置单个属性：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">   <span class="comment">//第一个参数：需要设置的属性名</span></div><div class="line"><span class="comment">//第二个参数：对应的属性值</span></div><div class="line">attr(name, value);</div><div class="line"><span class="comment">//用法举例</span></div><div class="line">$(“img”).attr(“title”,”hello,world”);</div><div class="line">$(“img”).attr(“alt”,“hello,world”);</div></pre></td></tr></table></figure>
+</li>
+<li><p>设置多个属性：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">   <span class="comment">//参数是一个对象，包含了需要设置的属性名和属性值</span></div><div class="line">attr(obj)</div><div class="line"><span class="comment">//用法举例</span></div><div class="line">$(<span class="string">"img"</span>).attr(&#123;</div><div class="line">   <span class="attr">title</span>:<span class="string">"hello,world"</span>,</div><div class="line">   <span class="attr">alt</span>:<span class="string">"hello,world"</span>,</div><div class="line">   <span class="attr">style</span>:<span class="string">"opacity:.5"</span></div><div class="line">   &#125;);</div></pre></td></tr></table></figure>
+</li>
+<li><p>设置/获取属性（<code>attr</code>）：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">   <span class="comment">//传需要获取的属性名称，返回对应的属性值</span></div><div class="line">attr(name)</div><div class="line"><span class="comment">//用法举例</span></div><div class="line"><span class="keyword">var</span> oTitle = $(<span class="string">"img"</span>).attr(<span class="string">"title"</span>);</div><div class="line">alert(oTitle);</div></pre></td></tr></table></figure>
+</li>
+<li><p>设置/获取属性（<code>prop</code>）：<br>在jQuery1.6之后，对于checked、selected、disable这类boolean类型的属性来说，如果使用attr方法获取属性值，得到的不是true和false，而是checked以及undefined，使用prop方法来获取或者设置checked、selected、disable这类的值,prop方法使用跟attr方法一样。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">   <span class="comment">//设置属性</span></div><div class="line">$(“:checked”).prop(“checked”,<span class="literal">true</span>);</div><div class="line"><span class="comment">//获取属性</span></div><div class="line">$(“:checked”).prop(“checked”);<span class="comment">//返回true或者false</span></div></pre></td></tr></table></figure>
+</li>
+<li><p>友情提示：<br>获取属性时，只会获取到第一个元素对应的属性，与css方法相同；如果该属性不存在，那么会返回<code>undefined</code>.<br><code>attr</code> 方法 与<code>prop</code>方法的区别在于：<code>attr</code>方法无法获取到动态属性名，<code>prop</code>方法可以获取到动态属性名。</p>
+</li>
+<li><p>移除属性：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">   <span class="comment">//参数：需要移除的属性名，如果传空，那么不会有任何操作，注意，并不是移除所有的属性。</span></div><div class="line">   <span class="comment">//注意区分removeClass（删除类名）。</span></div><div class="line">removeAttr(name);</div><div class="line"><span class="comment">//用法举例</span></div><div class="line">$(<span class="string">"img"</span>).removeAttr(<span class="string">"title"</span>);</div></pre></td></tr></table></figure>
+</li>
 </ul>
 </li>
-<li>数组的长度属性: <code>arr.length</code>数组中元素的个数;</li>
-<li><p>数组的索引</p>
+<li><p>jQuery操作文本与内容</p>
 <ul>
-<li>数组中的元素是按照索引排列的，索引从左往右计算，第一位为0;<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">arr[0] = 1;  //将数组的第一项赋值为1；</div><div class="line">arr[“0”] = 1;	// 跟上一个方式相同</div></pre></td></tr></table></figure>
+<li><p>val方法：用于设置和获取表单元素的值，例如input、select、textarea的值；</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">   //设置值</div><div class="line">$(“#name”).val(“hello”);</div><div class="line">//获取值</div><div class="line">$(“#name”).val();</div></pre></td></tr></table></figure>
+</li>
+<li><p>html方法:</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">   //设置内容</div><div class="line">$(“div”).html(“&lt;span&gt;hello,world&lt;/span&gt;”);</div><div class="line">//获取内容</div><div class="line">$(“div”).html();</div></pre></td></tr></table></figure>
+</li>
+<li><p>text方法:</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">   //设置内容</div><div class="line">$(“div”).text(“&lt;span&gt;hello,world&lt;/span&gt;”);</div><div class="line">//获取内容</div><div class="line">$(“div”).text();</div></pre></td></tr></table></figure>
+</li>
+<li><p>html方法与text方法的区别：html方法会识别html标签，text方法会把内容直接当成字符串，并不会识别html标签。</p>
 </li>
 </ul>
 </li>
-<li><p>数组遍历</p>
-  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">for(var i = 0; i &lt; arr.lenght; i++)&#123;</div><div class="line">  		// i 相当于arr数组的索引值，i从0 开始,</div><div class="line">      	// 最大值为数组中最后一项的索引值arr.length-1;</div><div class="line">      console.log(arr[i]);</div><div class="line"> 	 &#125;</div></pre></td></tr></table></figure>
+<li><p>jQuery尺寸操作</p>
 <ul>
-<li>向数组最后添加一个新元素索引值为arr.length   arr[arr.length];</li>
-<li>数组的长度是随着数组元素的增减而增减的。</li>
-<li>数组的长度可以进行设置，如果设置的长度大于数组元素个数，不影响内容，多出的部分值为                <code>undefined</code>,如果设置的长度小于了元素实际个数，超出的部分元素会被删除。</li>
-</ul>
+<li><code>height</code>设置或者获取高度:<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">   <span class="comment">//带参数表示设置高度</span></div><div class="line">$(“img”).height(<span class="number">200</span>);</div><div class="line"><span class="comment">//不带参数获取高度</span></div><div class="line">$(“img”).height();</div></pre></td></tr></table></figure>
 </li>
-<li><p>数组的类型</p>
+</ul>
+<p>返回值是number类型（比如200），而使用$(“img”).css(“width”)返回的是字符串（比如200px）.</p>
 <ul>
-<li>数组是一个复杂数据类型，通过typeof检测时得到object，不准确，我们可以通过下列方法去检测数组的类型。<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"> var arr = [1,2,3];</div><div class="line">console.log(typeof arr);//如果arr为数组，返回object;</div><div class="line">//相对常用</div><div class="line"> console.log(arr instanceof Array); //如果arr为数组，返回true,否则返回false;</div><div class="line">//ie9以下不支持</div><div class="line"> console.log(Array.isArray(arr)); //如果arr为数组，返回true,否则返回false;</div><div class="line">//第三种</div><div class="line"> console.log(Object.prototype.toString.call(arr)==&quot;[object Array]&quot;);	//返回字符串&quot;[object Array]&quot;；</div></pre></td></tr></table></figure>
+<li>width设置获取宽度，与高度操作功能一样:<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">   <span class="comment">//带参数表示设置宽度</span></div><div class="line">$(“img”).width(<span class="number">200</span>);</div><div class="line"><span class="comment">//不带参数获取宽度</span></div><div class="line">$(“img”).width();</div></pre></td></tr></table></figure>
 </li>
 </ul>
 </li>
-</ul>
+<li><p>jQuery位置操作</p>
 <ul>
-<li>基本数据类型和复杂数据类型的区别<ul>
-<li>直观区别，数据量不同。</li>
-<li>保存上的区别：<ul>
-<li>基本数据类型的值保存在栈中</li>
-<li>复杂数据类型的值保存在堆中</li>
-</ul>
+<li><p><code>offset</code>设置或者获取元素相对于文档<code>document</code>的位置。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">   <span class="comment">//设置位置</span></div><div class="line">$(selector).offset(&#123;<span class="attr">left</span>:<span class="number">100</span>, <span class="attr">top</span>: <span class="number">150</span>&#125;);</div><div class="line"><span class="comment">//获取位置</span></div><div class="line">$(selector).offset();</div></pre></td></tr></table></figure>
 </li>
-<li>复制的区别：<ul>
-<li>基本数据类型复制的是栈中的值，在内存中开辟新区域，两者是完全独立的；</li>
-<li>复杂数据类型复制的是保存在栈中的指针，两个变量指向的是堆中的同一个区域；</li>
-</ul>
+<li><p>友情提示：使用offset操作，如果元素没有设置定位(默认position:static)，则会把position修改为relative.会修改left、top。</p>
 </li>
-</ul>
+<li><p><code>position</code>获取相对于其最近的有定位的父元素的位置。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">   <span class="comment">// 获取，返回值为对象：&#123;left:num, top:num&#125;</span></div><div class="line">$(selector).position();</div></pre></td></tr></table></figure>
 </li>
-<li><p>数组的复制<br>  *·由于数组是引用类型（复杂数据类型），复制的时候会出现问题，我们需要用特殊的复制方式。</p>
-  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"> var arr = [1,2,3];</div><div class="line">var arrNew =[];</div><div class="line">//遍历数组</div><div class="line">	for (var i = 0; i &lt; arr.length; i++) &#123;</div><div class="line">      		 //将数组中的每一项添加到新数组中</div><div class="line"> 			arrNew[arrNew.length] = arr[i];</div><div class="line"></div><div class="line"> &#125;</div><div class="line"></div><div class="line">	console.log(arr); 		//[1 ,2, 3]</div><div class="line">	console.log(arrNew);	 //[1 ,2, 3]</div></pre></td></tr></table></figure>
+<li><p>友情提示：position方法只能获取，不能设置。</p>
 </li>
-<li><p>二维数组</p>
-<ul>
-<li>遍历二维数组<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">  	 <span class="keyword">var</span> arr = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,[<span class="number">6</span>,<span class="number">7</span>,<span class="number">8</span>]];</div><div class="line">  	<span class="built_in">console</span>.log(arr);   <span class="comment">//[1, 2, 3, 4, 5, Array[3]]</span></div><div class="line"> 	 <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; arr.length; i++) &#123;</div><div class="line">      <span class="keyword">var</span> current = arr[i];</div><div class="line"><span class="comment">// 判断当前项是否是数组</span></div><div class="line">      <span class="keyword">if</span>(current <span class="keyword">instanceof</span> <span class="built_in">Array</span>)&#123;</div><div class="line"><span class="comment">//  如果是数组，遍历</span></div><div class="line">          <span class="keyword">for</span> (<span class="keyword">var</span> j = <span class="number">0</span>; j &lt; current.length; j++) &#123;</div><div class="line"><span class="comment">//  依次打印每一个值</span></div><div class="line">              <span class="built_in">console</span>.log(current[j]);<span class="comment">//6 7 8</span></div><div class="line">          &#125;</div><div class="line">      &#125;<span class="keyword">else</span>&#123;</div><div class="line">          <span class="built_in">console</span>.log(current);<span class="comment">//1 2 3 4 5</span></div><div class="line">      	&#125;</div><div class="line">  &#125;</div></pre></td></tr></table></figure></li>
+<li><p><code>scrollTop</code>设置或者获取垂直滚动条的位置。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">    <span class="comment">// 有参数表示设置偏移，参数为数值类型</span></div><div class="line">$(selector).scrollTop(<span class="number">100</span>);</div><div class="line"><span class="comment">// 无参数表示获取偏移</span></div><div class="line">$(selector).scrollTop();</div></pre></td></tr></table></figure>
+</li>
+<li><p><code>scrollLeft</code>设置或者获取水平滚动条的位置。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">    <span class="comment">// 有参数表示设置偏移，参数为数值类型</span></div><div class="line">$(selector).scrollLeft(<span class="number">100</span>);</div><div class="line"><span class="comment">// 无参数表示获取偏移</span></div><div class="line">$(selector).scrollLeft();</div></pre></td></tr></table></figure>
+</li>
 </ul>
 </li>
 </ul>
@@ -356,13 +365,13 @@
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/2016/10/18/数组/">数组</a></p>
+        <p><span>本文标题:</span><a href="/2016/10/16/jQuery的DOM操作/">jQuery的DOM操作</a></p>
         <p><span>文章作者:</span><a href="/" title="访问 weihong Liao 的个人博客">weihong Liao</a></p>
-        <p><span>发布时间:</span>2016年10月18日 - 09时37分</p>
-        <p><span>最后更新:</span>2016年10月23日 - 14时39分</p>
+        <p><span>发布时间:</span>2016年10月16日 - 12时48分</p>
+        <p><span>最后更新:</span>2016年10月23日 - 15时52分</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2016/10/18/数组/" title="数组">http://yoursite.com/2016/10/18/数组/</a>
-            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2016/10/18/数组/　　作者: weihong Liao" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <span>原始链接:</span><a class="post-url" href="/2016/10/16/jQuery的DOM操作/" title="jQuery的DOM操作">http://yoursite.com/2016/10/16/jQuery的DOM操作/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2016/10/16/jQuery的DOM操作/　　作者: weihong Liao" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script src="/js/clipboard.min.js"></script>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
@@ -375,18 +384,18 @@
 
 <nav id="article-nav">
   
-    <a href="/2016/10/19/jQuery事件/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2016/10/18/数组/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption"><</strong>
       <div class="article-nav-title">
         
-          jQuery事件
+          数组
         
       </div>
     </a>
   
   
-    <a href="/2016/10/16/jQuery的DOM操作/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">jQuery的DOM操作</div>
+    <a href="/2016/10/15/jQuery操作DOM-节点/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">jQuery操作DOM(节点)</div>
       <strong class="article-nav-caption">></strong>
     </a>
   
@@ -445,7 +454,7 @@
     
       <div class="duoshuo" id="comments">
     <!-- 多说评论框 start -->
-    <div class="ds-thread" data-thread-key="2016/10/18/数组/" data-title="数组" data-url="http://yoursite.com/2016/10/18/数组/"></div>
+    <div class="ds-thread" data-thread-key="2016/10/16/jQuery的DOM操作/" data-title="jQuery的DOM操作" data-url="http://yoursite.com/2016/10/16/jQuery的DOM操作/"></div>
     <!-- 多说评论框 end -->
     <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
     <script type="text/javascript">
@@ -468,13 +477,13 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2016/10/19/jQuery事件/" title="上一篇: jQuery事件">
+            <a href="/2016/10/18/数组/" title="上一篇: 数组">
                 <i class="fa fa-angle-left"></i>
             </a>
         
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
         
-            <a href="/2016/10/16/jQuery的DOM操作/" title="下一篇: jQuery的DOM操作">
+            <a href="/2016/10/15/jQuery操作DOM-节点/" title="下一篇: jQuery操作DOM(节点)">
                 <i class="fa fa-angle-right"></i>
             </a>
         
