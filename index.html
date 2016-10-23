@@ -233,59 +233,6 @@
 </nav>
       <div class="body-wrap">
   
-    <article id="post-jQuery操作样式" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/10/23/jQuery操作样式/" class="article-date">
-      <time datetime="2016-10-23T06:48:02.000Z" itemprop="datePublished">2016-10-23</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/10/23/jQuery操作样式/">jQuery操作样式</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
     <article id="post-jQuery动画" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
@@ -629,6 +576,102 @@
       
     <div class="article-tag tagcloud">
         <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript基础篇/">JavaScript基础篇</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-jQuery操作样式" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/10/16/jQuery操作样式/" class="article-date">
+      <time datetime="2016-10-16T06:48:02.000Z" itemprop="datePublished">2016-10-16</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/10/16/jQuery操作样式/">jQuery操作样式</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <ul>
+<li><p>css操作</p>
+<ul>
+<li>设置或者修改样式，操作的是style属性。</li>
+<li><p>设置单个样式：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">   	//name：需要设置的样式名称</div><div class="line">//value：对应的样式值</div><div class="line">css(name, value);</div><div class="line">//使用案例</div><div class="line">$(&quot;#one&quot;).css(&quot;background&quot;,&quot;gray&quot;);//将背景色修改为灰色</div></pre></td></tr></table></figure>
+</li>
+<li><p>设置多个样式</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">   	//参数是一个对象，对象中包含了需要设置的样式名和样式值</div><div class="line">css(obj);</div><div class="line">//使用案例</div><div class="line">$(&quot;#one&quot;).css(&#123;</div><div class="line">		  &quot;background&quot;:&quot;gray&quot;,</div><div class="line"> 		 &quot;width&quot;:&quot;400px&quot;,</div><div class="line">  		&quot;height&quot;:&quot;200px&quot;</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+</li>
+<li><p>获取样式</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">   	//name:需要获取的样式名称</div><div class="line">css(name);</div><div class="line">//案例</div><div class="line">$(&quot;div&quot;).css(&quot;background-color&quot;);</div></pre></td></tr></table></figure>
+</li>
+<li><p>注意：获取样式操作只会返回第一个元素对应的样式值。</p>
+</li>
+</ul>
+</li>
+<li><p>class操作</p>
+<ul>
+<li><p>添加样式类</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">   	//name：需要添加的样式类名，注意参数不要带点.</div><div class="line">addClass(name);</div><div class="line">//例子:给所有的div添加one的样式。</div><div class="line">$(“div”).addClass(“one”);</div></pre></td></tr></table></figure>
+</li>
+<li><p>移除所有样式类</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">   	//不带参数，移除所有的样式类</div><div class="line">removeClass()</div><div class="line">//例子，移除div所有的样式类</div><div class="line">$(“div”).removeClass();</div></pre></td></tr></table></figure>
+</li>
+<li><p>移除单个样式类</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">   	//name:需要移除的样式类名</div><div class="line">removeClass(“name”);</div><div class="line">//例子，移除div中one的样式类名</div><div class="line">$(“div”).removeClass(“one”);</div></pre></td></tr></table></figure>
+</li>
+<li><p>判断是否有样式类</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">   	//name:用于判断的样式类名，返回值为true false</div><div class="line">hasClass(name)</div><div class="line">//例子，判断第一个div是否有one的样式类</div><div class="line">      $(“div”).hasClass(“one”);</div></pre></td></tr></table></figure>
+</li>
+<li><p>切换样式类</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">   	//name:需要切换的样式类名，如果有，移除该样式，如果没有，添加该样式。</div><div class="line">toggleClass(name);</div><div class="line">//例子</div><div class="line">$(“div”).toggleClass(“one”);</div></pre></td></tr></table></figure>
+</li>
+<li><p>总结：<br>1.如果操作到的样式非常少，可以考虑css方法<br>2.如果操作到的样式非常多，那么可以通过class方法来操作，将样式写到一个class类里面。<br>3.如果考虑到后期维护方便，将css从js中分离出来，那么推荐使用class的方式来操作。</p>
+</li>
+</ul>
+</li>
+</ul>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/jQuery基础篇/">jQuery基础篇</a></li></ul>
     </div>
 
       
