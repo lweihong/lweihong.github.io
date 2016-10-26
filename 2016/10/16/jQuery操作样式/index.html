@@ -25,7 +25,7 @@
 
 设置多个样式
 12345678//参数是一个对象，">
-<meta property="og:updated_time" content="2016-10-26T07:18:24.682Z">
+<meta property="og:updated_time" content="2016-10-26T07:22:27.633Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="jQuery操作样式">
 <meta name="twitter:description" content="css操作
@@ -309,21 +309,23 @@
 </ul>
 </li>
 <li><p>class操作</p>
+</li>
+</ul>
 <ul>
 <li><p>添加样式类</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">   	//name：需要添加的样式类名，注意参数不要带点.</div><div class="line">addClass(name);</div><div class="line">//例子:给所有的div添加one的样式。</div><div class="line">$(“div”).addClass(“one”);</div></pre></td></tr></table></figure>
-</li>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">//name：需要添加的样式类名，注意参数不要带点.</div><div class="line">addClass(name);</div><div class="line">//例子:给所有的div添加one的样式。</div><div class="line">$(“div”).addClass(“one”);</div></pre></td></tr></table></figure>
+<ul>
 <li><p>移除所有样式类</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">   	//不带参数，移除所有的样式类</div><div class="line">removeClass()</div><div class="line">//例子，移除div所有的样式类</div><div class="line">$(“div”).removeClass();</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">//不带参数，移除所有的样式类</div><div class="line">removeClass()</div><div class="line">//例子，移除div所有的样式类</div><div class="line">$(“div”).removeClass();</div></pre></td></tr></table></figure>
 </li>
 <li><p>移除单个样式类</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">   	//name:需要移除的样式类名</div><div class="line">removeClass(“name”);</div><div class="line">//例子，移除div中one的样式类名</div><div class="line">$(“div”).removeClass(“one”);</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">//name:需要移除的样式类名</div><div class="line">removeClass(“name”);</div><div class="line">//例子，移除div中one的样式类名</div><div class="line">$(“div”).removeClass(“one”);</div></pre></td></tr></table></figure>
 </li>
 <li><p>判断是否有样式类</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">   	//name:用于判断的样式类名，返回值为true false</div><div class="line">hasClass(name)</div><div class="line">//例子，判断第一个div是否有one的样式类</div><div class="line">      $(“div”).hasClass(“one”);</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">   //name:用于判断的样式类名，返回值为true false</div><div class="line">hasClass(name)</div><div class="line">//例子，判断第一个div是否有one的样式类</div><div class="line">      $(“div”).hasClass(“one”);</div></pre></td></tr></table></figure>
 </li>
 <li><p>切换样式类</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">   	//name:需要切换的样式类名，如果有，移除该样式，如果没有，添加该样式。</div><div class="line">toggleClass(name);</div><div class="line">//例子</div><div class="line">$(“div”).toggleClass(“one”);</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">   //name:需要切换的样式类名，如果有，移除该样式，如果没有，添加该样式。</div><div class="line">toggleClass(name);</div><div class="line">//例子</div><div class="line">$(“div”).toggleClass(“one”);</div></pre></td></tr></table></figure>
 </li>
 <li><p>总结：<br>1.如果操作到的样式非常少，可以考虑css方法<br>2.如果操作到的样式非常多，那么可以通过class方法来操作，将样式写到一个class类里面。<br>3.如果考虑到后期维护方便，将css从js中分离出来，那么推荐使用class的方式来操作。</p>
 </li>
@@ -341,7 +343,7 @@
         <p><span>本文标题:</span><a href="/2016/10/16/jQuery操作样式/">jQuery操作样式</a></p>
         <p><span>文章作者:</span><a href="/" title="访问 weihong Liao 的个人博客">weihong Liao</a></p>
         <p><span>发布时间:</span>2016年10月16日 - 14时48分</p>
-        <p><span>最后更新:</span>2016年10月26日 - 15时18分</p>
+        <p><span>最后更新:</span>2016年10月26日 - 15时22分</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2016/10/16/jQuery操作样式/" title="jQuery操作样式">http://yoursite.com/2016/10/16/jQuery操作样式/</a>
             <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2016/10/16/jQuery操作样式/　　作者: weihong Liao" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
