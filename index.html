@@ -149,7 +149,7 @@
                 
                 <section class="switch-part switch-part2">
                     <div class="widget tagcloud" id="js-tagcloud">
-                        <a href="/tags/JavaScript基础篇/" style="font-size: 10px;">JavaScript基础篇</a> <a href="/tags/jQuery基础篇/" style="font-size: 20px;">jQuery基础篇</a>
+                        <a href="/tags/JavaScript基础篇/" style="font-size: 20px;">JavaScript基础篇</a> <a href="/tags/jQuery基础篇/" style="font-size: 10px;">jQuery基础篇</a>
                     </div>
                 </section>
                 
@@ -232,6 +232,480 @@
     </div>
 </nav>
       <div class="body-wrap">
+  
+    <article id="post-字符串" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/10/26/字符串/" class="article-date">
+      <time datetime="2016-10-26T10:45:52.000Z" itemprop="datePublished">2016-10-26</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/10/26/字符串/">字符串</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <ul>
+<li><p>基本包装类型<br>  基本数据类型字符串具有属性，但是字符串又不是对象。<br>  js中有一种称为基本包装类型的对象，在我们使用字符串的属性或方法的时候，会创建一个基本包装类型对象，使用这个对象的属性和方法，使用完毕后这个对象立即销毁。</p>
+</li>
+<li><p>length长度属性，字符串的字符长度</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">  var str = &quot;abcdef&quot;;</div><div class="line">// 基本包装类型</div><div class="line">  console.log(str.length);	 //字符串的字符长度6</div></pre></td></tr></table></figure>
+</li>
+<li><p>访问某个字符的方式<br>  str.charAt(索引值)<br>  str[索引值]  h5添加的，兼容性有问题</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">var str = &quot;ABCDEF&quot;;</div><div class="line">  console.log(str[0]);	//A</div><div class="line">  str[0] = 100;</div><div class="line">  console.log(str);		//	ABCDEF</div><div class="line">  console.log(str.charAt(0));	//A</div><div class="line">  console.log(str.charCodeAt(0));	//	65</div></pre></td></tr></table></figure>
+</li>
+<li><p>位置方法<br>  indexOf(value,start)  value要检索的字符，start是起始索引值。<br>  lastIndexOf(value,start) 从后面进行检索</p>
+</li>
+<li><p>操作方法</p>
+<ul>
+<li><p>连接字符串 str.concat(“1”)  但是+更常用</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">console.log(str.concat(&quot;1&quot;));</div><div class="line">console.log(str + 1);</div></pre></td></tr></table></figure>
+</li>
+<li><p>截取字符串str.slice(2, 5);</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">// 从1开始截取4个字符</div><div class="line">console.log(str.substr(2, 5));</div></pre></td></tr></table></figure>
+</li>
+<li><p>截取字符串，与slice相似，一般使用slice  str.substring(2, 5);</p>
+</li>
+<li>按照长度截取字符串 str.substr(1, 4);</li>
+<li><p>大小写转换<br>转换为大写str.toUpperCase();<br>转换为小写str.toLowerCase();</p>
+</li>
+<li><p>分割字符串 str.split(“-“);</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"> var str = &quot;1-2-3-4-5&quot;;</div><div class="line">var arr = str.split(&quot;-&quot;);</div><div class="line">console.log(arr.join(&quot;-&quot;));	//1-2-3-4-5</div></pre></td></tr></table></figure>
+</li>
+<li><p>replace(参数1,参数2)   将字符串中的参数1部分更换为参数2，并且返回一个新字符串。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">var str = &quot;abca&quot;;</div><div class="line"> console.log(str.replace(&quot;a&quot;, &quot;12345&quot;));</div><div class="line"> str = str.replace(&quot;o&quot;,&quot;!&quot;);	//12345bca</div></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ul>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript基础篇/">JavaScript基础篇</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-内置对象-数组" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/10/23/内置对象-数组/" class="article-date">
+      <time datetime="2016-10-23T08:21:41.000Z" itemprop="datePublished">2016-10-23</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/10/23/内置对象-数组/">内置对象-数组</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <ul>
+<li><p>内置对象-数组</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">var arr = [1,2,3,4];</div></pre></td></tr></table></figure>
+</li>
+<li><p>转换为字符串的方法</p>
+<ul>
+<li>arr.join(输入一个字符串)  join方法返回一个连接后的字符串<br>不传参数返回的结果1,2,3,4 ，如果不想要逗号，可以传入一个空字符串。</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"> var arr = [1, 1, 2];</div><div class="line"></div><div class="line">console.log(arr.join(&quot;-&quot;));	//1-1-2</div><div class="line">console.log(arr);	//[1, 1, 2]</div><div class="line">console.log(arr.join(&quot;&quot;));	//112</div></pre></td></tr></table></figure>
+<ul>
+<li>arr.toString()  可以将arr转换为字符串 ，不更改原有数组。<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">var arr = [1, 1, 2];</div><div class="line">console.log(arr.toString());	//1,1,2</div><div class="line">console.log(arr);	//[1, 1, 2]</div></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>基本操作方法</p>
+<ul>
+<li>从后面添加： arr.push()可以向数组最后添加一个或多个新项，返回添加后的数组的元素个数。</li>
+<li>从后面删除： arr.pop()  从数组最后删除一个元素，并且返回这个元素。</li>
+<li>从前面添加 ： arr.unshift()  从数组前面插入一个或多个元素，注意插入多个的顺序。  返回添加后的数组的元素个数</li>
+<li>从前面删除：arr.shift();  从数组前面删除一个 ，返回删除的元素。</li>
+</ul>
+</li>
+<li><p>位置方法<br>  1、indexOf(参数1，参数2（可选）) 。<br>  参数1为要寻找的值，参数2可选，为寻找的起始位置，返回找到的索引值（只能找到一个）。如果没找到，返回-1.</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">var arr = [1, &quot;a&quot;, 3, 4, 5, &quot;a&quot;, 4, 5, &quot;a&quot;];</div><div class="line"></div><div class="line">      // 得到参数所在的索引位置</div><div class="line">   console.log(arr.indexOf(7));	//由于数组内没有7这个值 ，返回-1；</div><div class="line">   console.log(arr.lastIndexOf(&quot;a&quot;));	//索引值为8</div><div class="line">   console.log(arr.indexOf(&quot;a&quot;,5+1));	//5+1代表在找到索引为5，值为a的下一个a，所以打印的是8.</div></pre></td></tr></table></figure>
+<p>  2、lastIndexOf(参数1，参数2（可选）)，使用方式与indexOf相同，不同点为从数组最后开始查找。</p>
+<ul>
+<li>再举个栗子<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">  var arr = [0, 1, 1, 0, 1, 0, 1, 1, 1, 0, 1,0];</div><div class="line"> 	//找到arr中所有0的位置</div><div class="line">  var indexArr = [];</div><div class="line"></div><div class="line"> 	 //可以将index初始值设置为0 也可以设置为-1，while中的index+1要相应改变</div><div class="line">  var index = 0;</div><div class="line"></div><div class="line">  	//0出现的次数不一定，循环的次数也不一定</div><div class="line">  	//判断是否还有0存在</div><div class="line">  while (arr.indexOf(0, index) != -1) &#123;</div><div class="line">  	//   新的位置</div><div class="line">  index = arr.indexOf(0, index);</div><div class="line">  indexArr.push(index);</div><div class="line">// 手动给index++</div><div class="line">      index++;</div><div class="line">  &#125;</div><div class="line"></div><div class="line">  console.log(indexArr);	// [0, 3, 5, 9, 11]</div></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>排序方法</p>
+<ul>
+<li><p>翻转 arr.reverse()  可以将数组所有元素翻转，改变原数组</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">var arr = [1,2,3,4,5];</div><div class="line">      arr.reverse();</div><div class="line">      console.log(arr);	//[5, 4, 3, 2, 1]</div></pre></td></tr></table></figure>
+</li>
+<li><p>排序 arr.sort()   改变原数组。<br>对字符串排序是按照首字母排序。<br>对数值排序也是按照第一位排序，想要正序或倒叙可以传入函数参数，</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">	//字母排序</div><div class="line">var arr = [&quot;z&quot;,&quot;g&quot;, &quot;d&quot;, &quot;k&quot;, &quot;a&quot;, &quot;cacdad&quot;];</div><div class="line">   arr.sort();</div><div class="line">   console.log(arr);	//[&quot;a&quot;, &quot;cacdad&quot;, &quot;d&quot;, &quot;g&quot;, &quot;k&quot;, &quot;z&quot;]</div><div class="line"></div><div class="line">    var arr = [6,3,18,12,7,1,4];</div><div class="line">   //正序排序</div><div class="line">   arr.sort(function (a,b) &#123;</div><div class="line">       return a-b;</div><div class="line">   &#125;);</div><div class="line">   console.log(arr);	//[1, 3, 4, 6, 7, 12, 18]</div><div class="line"></div><div class="line">   //倒序排序</div><div class="line">    arr.sort(function (a,b) &#123;</div><div class="line">        return b-a;</div><div class="line">    &#125;);</div><div class="line">    console.log(arr);	// [18, 12, 7, 6, 4, 3, 1]</div></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>关于sort方法（栗子：模拟sort方法）</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line">var arrOut = [6, 5, 8, 9, 1, 15, 23];</div><div class="line"></div><div class="line">    function sort(arr, fn) &#123;</div><div class="line">        for (var i = 0; i &lt; arr.length - 1; i++) &#123;</div><div class="line">	//  每一趟的次数</div><div class="line">            for (var j = 0; j &lt; arr.length - 1 - i; j++) &#123;</div><div class="line">	//    比較</div><div class="line">                if (fn(arr[j], arr[j + 1]) &gt; 0) &#123;</div><div class="line">		//     正序 arr[j] - arr[j + 1] &gt; 0</div><div class="line">		//      倒序 arr[j + 1] - arr[j] &gt;0</div><div class="line"></div><div class="line">        //	交换位置</div><div class="line">                    var temp = arr[j];</div><div class="line">                    arr[j] = arr[j + 1];</div><div class="line">                    arr[j + 1] = temp;</div><div class="line">                &#125;</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    sort(arrOut, function (a, b) &#123;</div><div class="line">        return b - a;</div><div class="line">    &#125;);</div><div class="line">    console.log(arrOut);	//[23, 15, 9, 8, 6, 5, 1]</div></pre></td></tr></table></figure>
+</li>
+<li><p>操作方法<br>  1、arr.concat();可以传入多个参数，连接在arr后，返回新数组，不改变原有数组。复制数组：arr.concat();  如果不传参数，也会返回一个和原数组相同的新数组。</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">var arr = [1,2,3,4,5];</div><div class="line">console.log(arr.concat(100, 200));	//[1, 2, 3, 4, 5, 100, 200]</div><div class="line">console.log(arr);	//[1, 2, 3, 4, 5]</div></pre></td></tr></table></figure>
+<p>  2、arr.slice(start,end) 接受两个参数  两个参数都是索引值，可以从arr中拷贝一部分元素，含start不含end。  返回拷贝的部分，不改变原数组</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">var arr = [1, 2, 3, 4, 5];</div><div class="line"> console.log(arr.slice(1, 3));	//[2, 3]</div><div class="line"> console.log(arr);	//[1, 2, 3, 4, 5]</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<pre><code>3、arr.splice(start,len,..) start表示截取的起始位置，len表示要截取多少个元素，后面的所有参数是可选的，表示将后面的参数添加到删除掉的位置。返回删除的元素，改变原数组。
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"> var arr = [1, 2, 3, 4, 5];</div><div class="line">console.log(arr.splice(1, 2, &quot;a&quot;, &quot;a&quot;)); 	//[2, 3]</div><div class="line">console.log(arr);	//[1, &quot;a&quot;, &quot;a&quot;, 4, 5]</div></pre></td></tr></table></figure>
+
+4、清空数组的三种方式
+arr.length = 0;
+arr.splice(0,arr.length);
+arr = [ ];
+</code></pre>
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript基础篇/">JavaScript基础篇</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-日期对象" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/10/22/日期对象/" class="article-date">
+      <time datetime="2016-10-22T10:26:53.000Z" itemprop="datePublished">2016-10-22</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/10/22/日期对象/">日期对象</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <ul>
+<li><p>Date<br>var date = new Date();</p>
+<ul>
+<li><p>将日期转换为毫秒形式的三种方式</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">var date = +new Date();</div><div class="line">  console.log(date);</div><div class="line"></div><div class="line">var date = new Date();</div><div class="line">  console.log(Date.now());</div><div class="line"></div><div class="line">var date = Date.parse(&quot;2016-7-7&quot;);</div><div class="line"> console.log(date);</div></pre></td></tr></table></figure>
+</li>
+<li><p>设置日期格式</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">//使用数值设置日期时，月份从0开始</div><div class="line">      var date = new Date(2016,2,1);</div><div class="line">      console.log(date);</div><div class="line"></div><div class="line">    //使用字符串格式，月份正常显示</div><div class="line">      var date = new Date(&quot;2016-1-1&quot;);</div><div class="line">      console.log(date);</div></pre></td></tr></table></figure>
+</li>
+<li><p>获取年、月、日、星期、小时</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">   var date = new Date();</div><div class="line">   console.log(date.getFullYear());</div><div class="line">//    月份从0开始</div><div class="line">   console.log(date.getMonth()+1);</div><div class="line">//    获取日</div><div class="line">   console.log(date.getDate());</div><div class="line">//    获取星期 星期从周日开始计算，周日为0</div><div class="line">   console.log(date.getDay());</div><div class="line"></div><div class="line">//    获取小时</div><div class="line">   console.log(date.getHours());</div><div class="line">   console.log(date.getMinutes());</div><div class="line">   console.log(date.getSeconds());</div><div class="line">   console.log(date.getMilliseconds());</div></pre></td></tr></table></figure></li>
+</ul>
+</li>
+</ul>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript基础篇/">JavaScript基础篇</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-对象" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/10/21/对象/" class="article-date">
+      <time datetime="2016-10-21T05:11:28.000Z" itemprop="datePublished">2016-10-21</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/10/21/对象/">对象</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <ul>
+<li>什么是对象？<br>  对象是具体的一个东西，每一个对象都有自身的特征，也都有自身的行为;</li>
+<li><p>创建对象的方式：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">var obj = &#123;&#125;;</div><div class="line">var obj = new Object();</div></pre></td></tr></table></figure>
+</li>
+<li><p>给对象添加属性和方法通过对象名.属性名</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">obj.name =&quot;a&quot;;</div></pre></td></tr></table></figure>
+<p>  方法跟属性的区别在于，方法中保存的是函数。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">obj.sayHi = function()&#123;</div><div class="line">	alert(&quot;hello,world&quot;);</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
+</li>
+<li><p>this<br>  在方法内使用this表示这个方法所属于的对象。</p>
+</li>
+<li><p>构造函数<br>  在调用构造函数的时候，调用前加new<br>  构造函数的作用就是创建对象，在构造函数内需要做的一件事情就是添加属性和方法。<br>  使用this，this就代表创建出来的对象。<br>  构造函数的名字，首字母大写。</p>
+</li>
+</ul>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript基础篇/">JavaScript基础篇</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-函数" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/10/20/函数/" class="article-date">
+      <time datetime="2016-10-20T07:30:34.000Z" itemprop="datePublished">2016-10-20</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/10/20/函数/">函数</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <ul>
+<li><p>为什么要用函数<br>  当某一段代码的重复使用次数多时，我们可以使用函数这种方式实现重用。</p>
+</li>
+<li><p>函数的声明方式</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">function 函数名 ( ) &#123;</div><div class="line">	//大括号的作用是标示代码的范围</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>函数的调用方式<br>  函数内部代码本身不执行，需要调用。<br>  调用方式  函数名();</p>
+</li>
+<li><p>函数的定义<br>  函数是在调用时执行的可重复使用的代码块。</p>
+</li>
+<li><p>函数的参数<br>  写在函数体的小括号内，多个使用,(逗号)分隔</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">function 函数名(参数1，参数2。。。。)&#123;</div><div class="line">	//函数代码</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>  写在函数体内的参数称为形参-形式上的参数</p>
+</li>
+<li><p>函数的返回值：<br>  在函数内声明的变量在函数外无法访问。<br>  如果想要让函数的计算结果被外界得到，可以通过设置函数的返回值来实现。<br>  在函数的最后添加return 值。<br>  返回值通过函数调用语句进行接收。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">function getSum(start,end) &#123;</div><div class="line">	var sum = 0;</div><div class="line">    for(var i =start;i&lt;=end; i++) &#123;</div><div class="line">    	sum+=i;</div><div class="line">    &#125;</div><div class="line">    console.log(sum);</div><div class="line">    //通过return将sum的值返回到函数外</div><div class="line">    return sum;</div><div class="line">&#125;</div><div class="line"></div><div class="line"> //在函数外无法获取函数内的值,通过函数调用来接收函数的返回值;</div><div class="line">console.log(getSum(200,300)); //500</div><div class="line"></div><div class="line"> //也可以先保存函数的返回值，然后再使用</div><div class="line">	var result = gitSum(300,400);</div><div class="line">    conlole.log(result);//700</div></pre></td></tr></table></figure>
+<p>  return执行后直接结束函数，return后面的代码不会继续执行。<br>  函数没设定返回值，值为undefined。<br>  函数名代表了函数体（函数本身）。</p>
+</li>
+<li><p>arguments</p>
+<ul>
+<li>arguments表示当前函数的实参列表（保存了当前的），本身是一个伪数组。</li>
+<li>伪数组：支持长度和索引，但是不支持数组的方法。</li>
+<li>在其他语言中有重载，js中没有，js中函数不能重名，我们可以通过判断arguments的length来模拟这一效果。</li>
+</ul>
+</li>
+<li><p>函数的参数传递</p>
+<ul>
+<li>js中函数的参数传递方式为 值传递 （形参复制了实参的值）。</li>
+<li>基本类型在复制的时候，相当于克隆，两者没有任何关联。</li>
+<li>引用类型在复制的时候，两者指针（引用相同），也就是说两者是一样的。</li>
+</ul>
+</li>
+<li><p>函数的声明方式：</p>
+<ul>
+<li>function 函数名(){},</li>
+<li><p>使用函数声明，在函数声明语句的前后都可以进行调用</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">foo();</div><div class="line"></div><div class="line">function foo() &#123;</div><div class="line">console.log(&quot;a&quot;);</div><div class="line">&#125;</div><div class="line"></div><div class="line">foo();</div></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>函数表达式:<br>  只能在声明语句之后进行调用<br>  var fun = function(){};</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">var fun = function() &#123;</div><div class="line">	console.log(&quot;a&quot;)</div><div class="line">&#125;</div><div class="line">fun();</div></pre></td></tr></table></figure>
+</li>
+<li><p>变量作用域</p>
+<ul>
+<li>script标签内称为全局作用域。<br>在全局作用域下声明的变量称为全局变量，全局变量在全局可以访问。</li>
+<li>在函数内部称为局部作用域。<br>而在函数内声明的变量，称为局部变量，局部变量只能在局部访问。<br>当我们在某一个作用域内使用变量时，寻找的时候是优先当前作用域</li>
+<li>作用域大的区域无法访问作用域小的内部的变量。</li>
+<li>作用域小的区域可以访问外部的变量。</li>
+</ul>
+</li>
+<li><p>变量提升<br>  提升到当前作用域顶端<br>  在每个作用域的代码执行前存在一个步骤，称为预解析。<br>  在预解析阶段会寻找当前作用域内的var和function<br>  当找到变量var的时候，将变量声明语句提升赋值语句保留在原地。<br>  找到函数声明function时，函数整体提升（注意只有函数声明方式。函数表达式遵循    变量提升的规则）。</p>
+</li>
+<li><p>变量的怪异声明方式：（不推荐这样写）<br>  var a = b = c = 9; 只有a属于当前作用域，b和c都是全局变量。<br>  声明变量时不加var，这个变量就是全局变量。</p>
+</li>
+<li><p>匿名函数<br>  匿名函数就是没有名字的函数,一般是在函数表达式内使用，不能单独存在。</p>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">function()&#123;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<ul>
+<li>自调用函数<br>  自调用函数会在书写的位置上执行一次。</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">(function(a)&#123;</div><div class="line">	console.log(a);	//打印1</div><div class="line">&#125;)(1);</div></pre></td></tr></table></figure>
+<ul>
+<li><p>函数的类型<br>  检测方式typeof;   函数的类型是function。</p>
+</li>
+<li><p>函数注释的使用<br>  在函数前输入/**点击回车，可以输入一些跟函数参数返回值相关的标注。</p>
+</li>
+<li><p>递归<br> 函数在函数内调用自己，这种形式我们称为递归</p>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">function fun()&#123;</div><div class="line">	console.log(&quot;a&quot;);</div><div class="line">    fun();</div><div class="line">&#125;</div><div class="line"></div><div class="line">fun();</div></pre></td></tr></table></figure>
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript基础篇/">JavaScript基础篇</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
   
     <article id="post-jQuery动画" class="article article-type-post" itemscope itemprop="blogPost">
   
@@ -819,663 +1293,10 @@
 
 
   
-    <article id="post-jQuery操作DOM-节点" class="article article-type-post" itemscope itemprop="blogPost">
   
-    <div class="article-meta">
-      <a href="/2016/10/15/jQuery操作DOM-节点/" class="article-date">
-      <time datetime="2016-10-15T02:47:29.000Z" itemprop="datePublished">2016-10-15</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/10/15/jQuery操作DOM-节点/">jQuery操作DOM(节点)</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <ul>
-<li><p>创建元素</p>
-<ul>
-<li>使用html方法创建元素</li>
-</ul>
-<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">//$(htmlStr)</div><div class="line">//htmlStr：html格式的字符串</div><div class="line">$(“&lt;span&gt;这是一个span元素&lt;/span&gt;”);</div><div class="line">    //设置内容</div><div class="line">$(“div”).html(“&lt;span&gt;这是一段内容&lt;/span&gt;”);</div><div class="line">//获取内容</div><div class="line">$(“div”).html()</div></pre></td></tr></table></figure>
-</li>
-<li><p>添加新建的元素：</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">//方法一：将jQuery对象添加到调用者内部的最后面。</div><div class="line">var $span = $(“&lt;span&gt;这是一个span元素&lt;/span&gt;”);</div><div class="line">$(“div”).append($span);</div><div class="line"></div><div class="line">//方法二：参数传字符串，会自动创建成jquery对象</div><div class="line">$(“div”).append(“&lt;span&gt;这是一个span元素&lt;/span&gt;”).</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<ul>
-<li><p>添加已经存在的元素</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> $p = $(“p”);</div><div class="line">$(“div”).append($p);</div><div class="line"><span class="comment">//注意：如果添加的是已经存在的元素，那么会把之前的元素给干掉。（类似于剪切的		功能）。</span></div></pre></td></tr></table></figure>
-</li>
-<li><p>类似的用法：<code>append</code>  <code>prepend</code> <code>after</code> <code>before</code>.</p>
-</li>
-<li><p>清空元素</p>
-<ul>
-<li>empty：清空指定节点的所有元素，自身保留(清理门户):</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">//清空div的所有内容（推荐使用，会清除子元素上绑定的内容，源码）</div><div class="line">$(“div”).empty();</div><div class="line">//使用html方法来清空元素，不推荐使用，会造成内存泄漏，绑定的事件不会被清除。</div><div class="line">$(“div”).html(“”);</div></pre></td></tr></table></figure>
-</li>
-<li><p>删除元素</p>
-<ul>
-<li>remove：相比于empty，自身也删除（自杀）:<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$(“div”).remove();</div></pre></td></tr></table></figure>
-</li>
-</ul>
-</li>
-<li><p>克隆元素(复制匹配的元素)</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 复制$(selector)所匹配到的元素（深度复制）</span></div><div class="line">cloneNode(<span class="literal">true</span>);</div><div class="line"><span class="comment">// 返回值为复制的新元素，和原来的元素没有任何关系了。即修改新元素，不会影响到原来的元素。</span></div><div class="line">$(selector).clone();</div></pre></td></tr></table></figure>
-</li>
-</ul>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/jQuery基础篇/">jQuery基础篇</a></li></ul>
-    </div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-jQuery选择器篇" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/10/13/jQuery选择器篇/" class="article-date">
-      <time datetime="2016-10-13T08:49:40.000Z" itemprop="datePublished">2016-10-13</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/10/13/jQuery选择器篇/">jQuery选择器</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <ul>
-<li>什么是jQuery？<ul>
-<li>jquery的官网：<a href="http://jquery.com/" target="_blank" rel="external">http://jquery.com/</a></li>
-<li>jQuery就是一个js库，使用jQuery的话，会比使用JavaScript更简单。</li>
-<li>js库：把一些常用到的方法写到一个单独的js文件，使用的时候直接去引用这js文件就可以了。</li>
-</ul>
-</li>
-<li>学习jQuery，主要学习jQuery的一大堆的api。<ul>
-<li>API：application programming interface：应用程序编程接口，说白了，API就是方法。</li>
-<li>注意：方法调用的时候，都带小括号(),使用jQuery的方法的时候，不要忘了小括号（）；</li>
-</ul>
-</li>
-<li>怎样使用jQuery？<ul>
-<li>官网下载地址：<a href="http://jquery.com/download/" target="_blank" rel="external">http://jquery.com/download/</a></li>
-<li>下载时候有一个压缩版本（产品上线时用），一个未压缩版本（开发用）；</li>
-</ul>
-</li>
-<li><p>使用jQuery实现div动态展示案例的步骤：</p>
-<ul>
-<li><p>1)引包（引入jQuery文件）</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;script src=&quot;jquery-1.11.1.js&quot;&gt;&lt;/script&gt;</div></pre></td></tr></table></figure>
-</li>
-<li><p>2)入口函数</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">  	$(document).ready(function () &#123;</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
-</li>
-<li><p>3)功能实现</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">  	$(&quot;#btnShowDiv&quot;).click(function () &#123;</div><div class="line">	$(&quot;div&quot;).show(1000);</div><div class="line">&#125;);</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
-</li>
-</ul>
-</li>
-<li><p>JavaScript与jQuery对比</p>
-<ul>
-<li>JavaScript：<br>  入口函数，只能有一个，如果有多个，后面的会覆盖前面；<br>  代码容错性差，代码出现错误，会影响到后面代码的运行。<br>  浏览器兼容性差，比如火狐不支持innerText；<br>  DOM操作复杂，对于一些简单的动画效果，实现起来比较麻烦。</li>
-<li>jQuery：<br>  入口函数，可以有多个，并且不会发生覆盖的情况<br>  代码容错性好，屏蔽错误，并且不会影响后面代码的运行。<br>  对浏览器兼容性做了封装，因此不存在兼容性问题<br>  DOM操作简单，支持隐式迭代，实现动画非常简单。</li>
-</ul>
-</li>
-<li><p>版本介绍</p>
-<ul>
-<li>jquery大版本分为1.x和2.x（3.0）</li>
-<li>区别：2.x版本不再支持IE6/7/8。</li>
-<li>jQuery每一个版本又分为压缩版和未压缩版：<br>jQuery.js：未压缩版本（开发版本），代码可读性高，推荐在开发和学习阶段使用，方便查看源代码。<br>jQuery.min.js：压缩版本，去除了注释、换行、空格、并且将一些变量替换成了a,b,c之类的简单字符，基本没有可读性，推荐在项目生产环境使用，因为文件较小，减少网络压力。</li>
-</ul>
-</li>
-<li><p>jQuery入口函数的两种写法:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"> 		//第一种写法</div><div class="line">$(document).ready(function() &#123;	</div><div class="line">         </div><div class="line">&#125;);</div><div class="line">         </div><div class="line">//第二种写法</div><div class="line">$(function() &#123;</div><div class="line">	</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
-</li>
-<li><p>对比JavaScript的入口函数jQuery的入口函数,执行时机:<br>1.JavaScript的入口函数要等到页面中所有资源（包括图片、文件）加载完成才开始执行。<br>2.jQuery的入口函数只会等待文档树加载完成就开始执行，并不会等待图片、文件的加载。</p>
-</li>
-<li><p>关于1.3.4jQuery的<code>$</code>符号:</p>
-<ul>
-<li><code>$</code>就是一个函数：<code>$()</code>;参数不一样，功能不一样.</li>
-<li><code>$</code>常用的几种情况：<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">  	$(function() &#123;&#125;);//参数是function，说明是入口函数</div><div class="line">$(“#btnSetConent”);//参数是字符串，并且以#开头，是一个标签选择，</div><div class="line">      查找id=“btnSetContent”的元素</div><div class="line">$(“div”);//查找所有的div元素</div><div class="line">$(document).ready(funciton()&#123;&#125;)//将document转换成jQuery对象</div></pre></td></tr></table></figure>
-</li>
-</ul>
-</li>
-<li><p><code>=== jQuery</code>也就是说能用<code>$</code>的地方，完全可以用<code>jQuery，$</code>仅仅是简写形式。</p>
-</li>
-<li><p>jQuery对象与DOM对象之间的转换:</p>
-<ul>
-<li><p>什么是DOM对象？<br>使用JavaScript中的方法获取页面中的元素返回的对象就是dom对象。比如使用<code>document.getElement*</code>系列的方法返回的就是dom对象。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"> 		var btn = document.getElementById(“btnShowDiv”);</div><div class="line">var divs = document.getElementsByTagName(“div”);</div><div class="line">//dom对象只可以使用dom对象的方法和属性</div><div class="line">domObject.innerHTML = “dom对象设置文本”;</div><div class="line">domObject.style.display= “block”;//dom对象显示对象</div><div class="line">domObject.onclick = function() &#123;&#125;//dom对象绑定事件</div></pre></td></tr></table></figure>
-</li>
-<li><p>什么是jquery对象？<br>使用jquery的方法获取页面中的元素返回的对象就是jQuery对象。比如使用$()方法返回对象都是jquery对象。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"> 		$(“div”);//标签选择器返回的jquery对象。</div><div class="line">$(“#btnShowDiv”);//id选择器返回的jquery对象。</div><div class="line">//jquery对象只能使用jquery对象的方法</div><div class="line">var $obj = $(“div”);</div><div class="line">$obj.html(“jquery对象设置文本的方法”);</div><div class="line">$obj.show();//jquery对象显示文本</div><div class="line">$obj.click(function() &#123;&#125;);//jquery对象绑定事件</div></pre></td></tr></table></figure>
-</li>
-</ul>
-</li>
-<li><p>jQuery对象其实就是DOM对象的包装集（包装了DOM对象的集合）;</p>
-</li>
-<li><p>jQuery对象和DOM对象的相互转换:</p>
-<ul>
-<li><p>jquery对象转DOM对象:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">  	var $li = $(“li”);</div><div class="line">//第一种方法（推荐使用）</div><div class="line">$li[0];</div><div class="line">//第二种方法</div><div class="line">$li.get(0);</div><div class="line">//其实jQuery对象转DOM对象的实质就是取出jQuery对象中封装的DOM对象。</div></pre></td></tr></table></figure>
-</li>
-<li><p>DOM对象转jquery对象:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">  	var $obj = $(domObj);</div><div class="line">// $(document).ready(function()&#123;&#125;);就是典型的DOM对象转jQuery对象</div></pre></td></tr></table></figure>
-</li>
-</ul>
-</li>
-<li><p>区分jQuery和JavaScript:</p>
-<ul>
-<li>JavaScript是一门编程语言，我们用它来编写客户端浏览器脚本；jquery是用JavaScript实现的一个JavaScript库，把JavaScript里面常用的功能代码封装成一个文件，使用的时候直接引用即可，目的是提高我们的开发效率。</li>
-</ul>
-</li>
-<li><p>jQuery选择器</p>
-<ul>
-<li><p>jQuery选择器是jQuery为我们提供的一组方法，让我们更加方便的获取到页面中的元素。注意：jQuery选择器返回的是jQuery对象。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">  	$(&quot;#btnShowDiv&quot;)//id选择器</div><div class="line">$(&quot;div&quot;)//标签选择器</div></pre></td></tr></table></figure>
-</li>
-<li><p>jQuery选择器有很多，基本兼容了CSS1到CSS3所有的选择器，并且jQuery还添加了很多更加复杂的选择器，【可查看jQuery文档】；</p>
-</li>
-<li>jQuery选择器虽然很多，但是选择器之间可以相互替代，就是说获取一个元素，你会有很多种方法获取到。所以我们平时真正能用到的只是少数的最常用的选择器。</li>
-</ul>
-</li>
-<li>基本选择器<ul>
-<li>ID选择器    <code>$(“#id”);</code>    获取指定ID的元素</li>
-<li>类选择器    <code>$(“.class”);</code>    获取同一类<code>class</code>的元素</li>
-<li>标签选择器    <code>$(“div”);</code>    获取同一类标签的所有元素</li>
-<li>并集选择器    <code>$(“div,p,li”);</code>    使用逗号分隔，只要符合条件之一就可。获取所有的<code>div、p、li</code>元素</li>
-<li>交集选择器（标签指定式选择器）    <code>$(“div.redClass”)</code>;    注意选择器1和选择器2之间没有空格，<code>class</code>为<code>redClass</code>的<code>div</code>元素，注意区分后代选择器。</li>
-</ul>
-</li>
-<li>层级选择器<ul>
-<li>子代选择器<code>$(“ul&gt;li”);</code>使用&gt;号，获取儿子层级的元素，注意，并不会获取        孙子层级的元素</li>
-<li>后代选择器    $(“ul li”);    使用空格，代表后代选择器，获取ul下的所有li元素，包括孙子等;</li>
-</ul>
-</li>
-<li>过滤选择器<ul>
-<li><code>:eq（index）    $(“li:eq(2)”).css(“color”, ”red”);</code>获取到的    li元素中，选择索引号为2的元素，索引号index从0开始。</li>
-<li><code>:odd    $(“li:odd”).css(“color”, ”red”);</code>获取到的li元素中，选    择索引号为奇数的元素</li>
-<li><code>:even    $(“li:even”).css(“color”, ”red”);</code>获取到的li元素中，    选择索引号为偶数的元素</li>
-</ul>
-</li>
-<li>筛选选择器(方法)<ul>
-<li>筛选选择器的功能与过滤选择器有点类似，但是用法不一样，筛选选择器主要是方法。</li>
-<li><code>children(selector)    $(“ul”).children(“li”)</code>相当于            <code>$(“ul&gt;li”)</code>，子类选择器</li>
-<li><code>find(selector)    $(“ul”).find(“li”);</code>相当于<code>$(“ul li”),</code>后代选择器</li>
-<li><code>siblings(selector)    $(“#first”).siblings(“li”);</code>查找兄弟节点，不包括自己本身。</li>
-<li><code>parent()    $(“#first”).parent();</code>    查找父亲</li>
-<li><code>eq(index)    $(“li”).eq(2);</code>    相当于<code>$(“li:eq(2)”),index</code>从0开始</li>
-</ul>
-</li>
-</ul>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/jQuery基础篇/">jQuery基础篇</a></li></ul>
-    </div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-JavaScript语句" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/10/13/JavaScript语句/" class="article-date">
-      <time datetime="2016-10-13T07:00:00.000Z" itemprop="datePublished">2016-10-13</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/10/13/JavaScript语句/">JavaScript语句</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <h6 id="条件判断语句"><a href="#条件判断语句" class="headerlink" title="条件判断语句"></a>条件判断语句</h6><ul>
-<li><p><code>if</code>   <code>else</code> 分为三种结构：</p>
-<ul>
-<li><p>单<code>if</code>结构：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">	if(条件)&#123;</div><div class="line">	满足条件执行，不满足继续向下</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-</li>
-<li><p><code>if</code>..<code>else</code>：,</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">if(条件)&#123;</div><div class="line">	条件满足执行</div><div class="line">&#125;else&#123;</div><div class="line">	条件不满足执行</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-</li>
-<li><p>多个<code>if</code>..<code>else</code>的情况：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">  	if(条件)&#123;</div><div class="line"></div><div class="line">&#125;else if(条件)&#123;</div><div class="line"></div><div class="line">&#125;else&#123;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>
-</li>
-</ul>
-</li>
-<li><p>switch case语句 （比较时是全等比較）</p>
-   <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">    	switch(传入值)&#123;</div><div class="line">			case 值:</div><div class="line">				执行内部代码；</div><div class="line">				break;</div><div class="line">			case 值:</div><div class="line">				执行内部代码；</div><div class="line">				break;</div><div class="line">			default:</div><div class="line">				以是代码都没执行时，执行此代码。</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-</li>
-<li><p>通常情况下我们使用 if else 进行范围比较，使用 switch case 进行单值比較。</p>
-</li>
-<li><p>三元运算符：</p>
-<ul>
-<li>bool表达式？表达式1：表达式2； bool表达式为真，执行表达式1否则执行表达式二</li>
-</ul>
-</li>
-</ul>
-<h6 id="循环语句"><a href="#循环语句" class="headerlink" title="循环语句"></a>循环语句</h6><ul>
-<li><p>for循环语法：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">for( 1循环变量初始化; 2循环条件; 4循环变量增减)&#123;</div><div class="line"> 	3循环内的代码</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<ul>
-<li>执行顺序  1 2 3 4 2 3 4 2 3 4;</li>
-</ul>
-</li>
-<li><p>while循环和 do while 循环</p>
-<ul>
-<li><p>while 循环:(先判断再执行)</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">while (判断条件)&#123;</div><div class="line">	执行代码块;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-</li>
-<li><p>do while循环:（先执行再判断，比while循环多执行一次）</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">do &#123;</div><div class="line">	执行代码块</div><div class="line">&#125;</div><div class="line">while(判断条件);</div></pre></td></tr></table></figure>
-</li>
-</ul>
-</li>
-<li><p>（备注： for 循环和 while 循环 及 do..while循环可以互换使用的）。</p>
-</li>
-</ul>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript基础篇/">JavaScript基础篇</a></li></ul>
-    </div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-JavaScript运算符" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/10/13/JavaScript运算符/" class="article-date">
-      <time datetime="2016-10-13T02:26:21.000Z" itemprop="datePublished">2016-10-13</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/10/13/JavaScript运算符/">JavaScript运算符</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <ul>
-<li>算数运算符<ul>
-<li><code>+</code> <code>-</code> <code>*</code> <code>/</code> <code>%</code></li>
-</ul>
-</li>
-<li>一元运算符<ul>
-<li>一元指的是操作数的个数  <code>++</code>  <code>--</code><ul>
-<li>前置和后置不同:<ul>
-<li>前置:先自增（减） 然后参与当前运算</li>
-<li>先参与运算，再自增(减)</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p>逻辑运算符</p>
-<ul>
-<li><p>操作数都是bool值时</p>
-<ul>
-<li>逻辑与(且) <code>&amp;&amp;</code>  两个操作数都为true结果为true</li>
-<li>逻辑或<code>||</code>    有一个为ture就为true，两个都为false，结果为false</li>
-<li>取反    <code>！</code></li>
-<li><p>操作数不是<code>bool</code>值时： 短路操作</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="comment">//短路操作的法则：隐式转换完毕后，哪个操作数可以决定表达式的结果，就返回哪个操作数</span></div><div class="line"> <span class="comment">//	true  &amp;&amp;  true</span></div><div class="line"><span class="built_in">console</span>.log(<span class="string">'a'</span> &amp;&amp; <span class="string">'b'</span>); <span class="comment">//true</span></div><div class="line">   <span class="comment">//	false &amp;&amp; true</span></div><div class="line">   <span class="built_in">console</span>.log(<span class="string">''</span> &amp;&amp;  <span class="string">'a'</span>);	<span class="comment">//false</span></div><div class="line">   <span class="comment">//	true &amp;&amp; false</span></div><div class="line">   <span class="built_in">console</span>.log(<span class="number">10</span> &amp;&amp; <span class="number">0</span>);	<span class="comment">//false</span></div><div class="line">   <span class="comment">//逻辑或的短路操作</span></div><div class="line">    <span class="comment">//	true  ||  true</span></div><div class="line"><span class="built_in">console</span>.log(<span class="string">'a'</span> || <span class="string">'b'</span>); <span class="comment">//true</span></div><div class="line">    <span class="comment">//	true  ||  true</span></div><div class="line"><span class="built_in">console</span>.log(<span class="string">''</span> &amp;&amp; <span class="number">0</span>); <span class="comment">// false</span></div></pre></td></tr></table></figure>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p>比较运算符</p>
-<ul>
-<li><code>&gt;</code>    <code>&lt;</code>    <code>&gt;=</code>    <code>&lt;=</code>    <code>!=</code>    <code>!==</code>    返回结果为bool类型</li>
-</ul>
-</li>
-<li>赋值运算符<ul>
-<li><code>=</code> <code>+=</code>  <code>-=</code>  <code>*=</code>  <code>/=</code> <code>%=</code></li>
-</ul>
-</li>
-<li>相等运算符<ul>
-<li><code>==</code> 值相等 <code>===</code> 值和类型全等</li>
-</ul>
-</li>
-<li>运算符的优先级<ul>
-<li>从高到低：<code>()</code>优先级最高 &gt; 一元运算符（<code>++ --</code>）&gt;算数运算符（先<code>*/%</code>后<code>+-</code>）-&gt; 关系运算符（<code>&gt; &gt;= &lt; &lt;=</code>）&gt; 相等运算符（<code>== ！= === ！==</code>）&gt;逻辑运算符（先 <code>&amp;&amp;</code> 后<code>||</code>）</li>
-</ul>
-</li>
-</ul>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript基础篇/">JavaScript基础篇</a></li></ul>
-    </div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-JavaScript变量" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/10/12/JavaScript变量/" class="article-date">
-      <time datetime="2016-10-12T06:25:32.000Z" itemprop="datePublished">2016-10-12</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/10/12/JavaScript变量/">JavaScript变量</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <ul>
-<li>变量的作用：存储数据</li>
-<li>数据分为两种：<ul>
-<li>固定数据：固定的数据保存在硬盘中的。</li>
-<li>临时数据：临时的数据是保存在内存中。</li>
-<li>数据是保存在内存中的某一个区域的，每个区域对应一个内存地址，我们想要使用某个区域中的数据，就需要找到指定的地址，使用起来不方便。我们可以通过变量，变量实际上保存的是某个数据的地址，我们使用变量实际上就是使用变量中保存的地址中的数据。</li>
-</ul>
-</li>
-<li>变量的使用<ul>
-<li>变量的声明：<ul>
-<li>var 变量名，<code>var—variable</code>可变的  js是弱类型语言，变量的类型不定，可变</li>
-</ul>
-</li>
-<li>变量的命名规则：<ul>
-<li>1、不能使用关键字和保留字</li>
-<li>2、开头可以使用<code>_$</code>英文字母</li>
-<li>3、除了开头以外可以使用数字</li>
-<li>4、不能包含空格</li>
-</ul>
-<ul>
-<li>5、严格区分大小写;</li>
-</ul>
-</li>
-<li>变量的赋值和初始化<ul>
-<li>初始化：在变量声明同时进行赋值 <code>var num = 100</code>;</li>
-<li>赋值： <code>var num = 100;   num = 10;</code>  由于js是弱类型，除了保存数值型的变量也可以保存其他类型数据;但是我们不推荐这样做，可能会对使用造成不良影响。</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p>变量的类型</p>
-<ul>
-<li><p>基本数据类型：字符串<code>(string)</code>; 数值型<code>(number)</code>; 布尔类型<code>(boolean)</code>;   <code>undefined</code>;  <code>null</code>.</p>
-<ul>
-<li>字符串的值：使用成对的双引号或者单引号进行包裹(js中所有的标点符号必须为英文半角);</li>
-<li>数值型的值：<code>例如:0-9,0.1 0.2</code><ul>
-<li><code>NaN</code> <code>(not a number)</code> 不是一个数值类型</li>
-<li><code>isNaN</code>(数据);  是不是不是数  如果判断的数据不是数值型返回true</li>
-<li><code>Infinity</code> 表示无穷大，超出了js能承受的最大值</li>
-<li>-Infinity 表示无穷小</li>
-</ul>
-</li>
-<li>布尔类型<ul>
-<li><code>true</code> 真</li>
-<li><code>false</code> 假</li>
-</ul>
-</li>
-<li>undefined<ul>
-<li><code>defined</code> 定义</li>
-<li><code>undefined</code> 出现的情况：  变量声明未赋值</li>
-</ul>
-</li>
-<li><p>null 空</p>
-<ul>
-<li>undefined 与 null  相等不全等<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">console.log ( undefined == null); // true</div><div class="line">   console.log ( undefined === null); // false</div></pre></td></tr></table></figure>
-</li>
-</ul>
-</li>
-<li><p>数据类型判断</p>
-<ul>
-<li><code>typeof</code> 变量   / <code>typeof</code>(变量)</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p>变量的类型转换</p>
-<ul>
-<li><p>将其他类型转换为字符串类型：</p>
-<ul>
-<li><p>强制转换</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">    	 <span class="number">1</span>、toString()</div><div class="line">变量.toString()</div><div class="line"><span class="number">2</span>、<span class="built_in">String</span>()</div><div class="line"><span class="literal">undefined</span>和<span class="literal">null</span>不支持toString()方法</div></pre></td></tr></table></figure>
-</li>
-<li><p>隐式转换</p>
-<ul>
-<li>通过任意类型+任意字符串操作可以将其他类型转换为字符串类型</li>
-<li>在使用+操作的时候为了不改变数据的原有内容，使用空字符串</li>
-<li>空字符串中不能有任何内容</li>
-</ul>
-</li>
-<li>基本类型值的不可变性<ul>
-<li>通过类型转换或者重新赋值都无法修改基本类型的原有值。</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p>将其他类型转换为数值型：</p>
-<ul>
-<li>强制转换<ul>
-<li><code>Number()</code> 只能转换全部是数值型的字符串</li>
-<li><code>parseInt()</code> 可以转换前半部分为数字的字符串，转换结果为整数</li>
-<li><code>parseFloat()</code>可以包含小数</li>
-</ul>
-</li>
-<li>隐式转换<ul>
-<li><code>*</code>/ % 可以进行转换</li>
-<li><code>+</code>操作需要将+号放在数据前进行使用。</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>将其他类型转换为布尔类型：<ul>
-<li>强制转换<ul>
-<li><code>Boolean()</code><ul>
-<li><code>0</code> <code>undefined</code> <code>null</code> <code>“”</code> <code>NaN</code> 转换值为<code>false</code></li>
-<li>有值的字符串 有值的数 转换为<code>true</code></li>
-</ul>
-</li>
-</ul>
-</li>
-<li>隐式转换<ul>
-<li>！！ 可以进行隐式转换</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><code>undefined</code>和<code>null</code>类型只有一个值，不需要转换。</li>
-</ul>
-</li>
-<li>交换两个变量的值  <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> a = <span class="number">1</span>;</div><div class="line"><span class="keyword">var</span> b = <span class="number">2</span>;</div><div class="line"><span class="comment">//定义一个中转变量</span></div><div class="line"><span class="keyword">var</span> temp = a;</div><div class="line">a = b;</div><div class="line">b = temp;</div><div class="line"><span class="built_in">console</span>.log(a); <span class="comment">//2</span></div><div class="line"><span class="built_in">console</span>.log(b); <span class="comment">//1</span></div></pre></td></tr></table></figure>
-</li>
-</ul>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript基础篇/">JavaScript基础篇</a></li></ul>
-    </div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
+    <nav id="page-nav">
+      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
+    </nav>
   
 </div>
       <footer id="footer">

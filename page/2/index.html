@@ -3,39 +3,14 @@
 <head>
   <meta charset="utf-8">
   
-  <title>jQuery选择器 | 廖卫红</title>
+  <title>廖卫红</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="什么是jQuery？
-jquery的官网：http://jquery.com/
-jQuery就是一个js库，使用jQuery的话，会比使用JavaScript更简单。
-js库：把一些常用到的方法写到一个单独的js文件，使用的时候直接去引用这js文件就可以了。
-
-
-学习jQuery，主要学习jQuery的一大堆的api。
-API：application programming interface：">
-<meta property="og:type" content="article">
-<meta property="og:title" content="jQuery选择器">
-<meta property="og:url" content="http://yoursite.com/2016/10/13/jQuery选择器篇/index.html">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="廖卫红">
+<meta property="og:url" content="http://yoursite.com/page/2/index.html">
 <meta property="og:site_name" content="廖卫红">
-<meta property="og:description" content="什么是jQuery？
-jquery的官网：http://jquery.com/
-jQuery就是一个js库，使用jQuery的话，会比使用JavaScript更简单。
-js库：把一些常用到的方法写到一个单独的js文件，使用的时候直接去引用这js文件就可以了。
-
-
-学习jQuery，主要学习jQuery的一大堆的api。
-API：application programming interface：">
-<meta property="og:updated_time" content="2016-10-23T07:53:29.105Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="jQuery选择器">
-<meta name="twitter:description" content="什么是jQuery？
-jquery的官网：http://jquery.com/
-jQuery就是一个js库，使用jQuery的话，会比使用JavaScript更简单。
-js库：把一些常用到的方法写到一个单独的js文件，使用的时候直接去引用这js文件就可以了。
-
-
-学习jQuery，主要学习jQuery的一大堆的api。
-API：application programming interface：">
+<meta name="twitter:title" content="廖卫红">
   
     <link rel="alternative" href="/atom.xml" title="廖卫红" type="application/atom+xml">
   
@@ -49,6 +24,9 @@ API：application programming interface：">
   <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   
+    
+    
+  
   
       <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
   
@@ -60,8 +38,8 @@ API：application programming interface：">
           rootUrl: '/',
           fancybox: true,
           animate: true,
-          isHome: false,
-          isPost: true,
+          isHome: true,
+          isPost: false,
           isArchive: false,
           isTag: false,
           isCategory: false,
@@ -253,7 +231,99 @@ API：application programming interface：">
         </header>                
     </div>
 </nav>
-      <div class="body-wrap"><article id="post-jQuery选择器篇" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap">
+  
+    <article id="post-jQuery操作DOM-节点" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/10/15/jQuery操作DOM-节点/" class="article-date">
+      <time datetime="2016-10-15T02:47:29.000Z" itemprop="datePublished">2016-10-15</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/10/15/jQuery操作DOM-节点/">jQuery操作DOM(节点)</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <ul>
+<li><p>创建元素</p>
+<ul>
+<li>使用html方法创建元素</li>
+</ul>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">//$(htmlStr)</div><div class="line">//htmlStr：html格式的字符串</div><div class="line">$(“&lt;span&gt;这是一个span元素&lt;/span&gt;”);</div><div class="line">    //设置内容</div><div class="line">$(“div”).html(“&lt;span&gt;这是一段内容&lt;/span&gt;”);</div><div class="line">//获取内容</div><div class="line">$(“div”).html()</div></pre></td></tr></table></figure>
+</li>
+<li><p>添加新建的元素：</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">//方法一：将jQuery对象添加到调用者内部的最后面。</div><div class="line">var $span = $(“&lt;span&gt;这是一个span元素&lt;/span&gt;”);</div><div class="line">$(“div”).append($span);</div><div class="line"></div><div class="line">//方法二：参数传字符串，会自动创建成jquery对象</div><div class="line">$(“div”).append(“&lt;span&gt;这是一个span元素&lt;/span&gt;”).</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<ul>
+<li><p>添加已经存在的元素</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> $p = $(“p”);</div><div class="line">$(“div”).append($p);</div><div class="line"><span class="comment">//注意：如果添加的是已经存在的元素，那么会把之前的元素给干掉。（类似于剪切的		功能）。</span></div></pre></td></tr></table></figure>
+</li>
+<li><p>类似的用法：<code>append</code>  <code>prepend</code> <code>after</code> <code>before</code>.</p>
+</li>
+<li><p>清空元素</p>
+<ul>
+<li>empty：清空指定节点的所有元素，自身保留(清理门户):</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">//清空div的所有内容（推荐使用，会清除子元素上绑定的内容，源码）</div><div class="line">$(“div”).empty();</div><div class="line">//使用html方法来清空元素，不推荐使用，会造成内存泄漏，绑定的事件不会被清除。</div><div class="line">$(“div”).html(“”);</div></pre></td></tr></table></figure>
+</li>
+<li><p>删除元素</p>
+<ul>
+<li>remove：相比于empty，自身也删除（自杀）:<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$(“div”).remove();</div></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>克隆元素(复制匹配的元素)</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 复制$(selector)所匹配到的元素（深度复制）</span></div><div class="line">cloneNode(<span class="literal">true</span>);</div><div class="line"><span class="comment">// 返回值为复制的新元素，和原来的元素没有任何关系了。即修改新元素，不会影响到原来的元素。</span></div><div class="line">$(selector).clone();</div></pre></td></tr></table></figure>
+</li>
+</ul>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/jQuery基础篇/">jQuery基础篇</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-jQuery选择器篇" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
       <a href="/2016/10/13/jQuery选择器篇/" class="article-date">
@@ -269,23 +339,12 @@ API：application programming interface：">
       <header class="article-header">
         
   
-    <h1 class="article-title" itemprop="name">
-      jQuery选择器
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/10/13/jQuery选择器篇/">jQuery选择器</a>
     </h1>
   
 
       </header>
-      
-      <div class="article-info article-info-post">
-        
-
-        
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/jQuery基础篇/">jQuery基础篇</a></li></ul>
-    </div>
-
-        <div class="clearfix"></div>
-      </div>
       
     
     <div class="article-entry" itemprop="articleBody">
@@ -418,158 +477,424 @@ API：application programming interface：">
       
     </div>
     
-  </div>
-  
-    
-    <div class="copyright">
-        <p><span>本文标题:</span><a href="/2016/10/13/jQuery选择器篇/">jQuery选择器</a></p>
-        <p><span>文章作者:</span><a href="/" title="访问 weihong Liao 的个人博客">weihong Liao</a></p>
-        <p><span>发布时间:</span>2016年10月13日 - 16时49分</p>
-        <p><span>最后更新:</span>2016年10月23日 - 15时53分</p>
-        <p>
-            <span>原始链接:</span><a class="post-url" href="/2016/10/13/jQuery选择器篇/" title="jQuery选择器">http://yoursite.com/2016/10/13/jQuery选择器篇/</a>
-            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2016/10/13/jQuery选择器篇/　　作者: weihong Liao" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
-            <script src="/js/clipboard.min.js"></script>
-            <script> var clipboard = new Clipboard('.copy-path'); </script>
-        </p>
-        <p>
-            <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/cn/" title="中国大陆 (CC BY-NC-SA 3.0 CN)" target = "_blank">"署名-非商用-相同方式共享 3.0"</a> 转载请保留原文链接及作者。
-        </p>
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/jQuery基础篇/">jQuery基础篇</a></li></ul>
     </div>
 
-
-
-<nav id="article-nav">
-  
-    <a href="/2016/10/15/jQuery操作DOM-节点/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption"><</strong>
-      <div class="article-nav-title">
-        
-          jQuery操作DOM(节点)
-        
-      </div>
-    </a>
-  
-  
-    <a href="/2016/10/13/JavaScript语句/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">JavaScript语句</div>
-      <strong class="article-nav-caption">></strong>
-    </a>
-  
-</nav>
-
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
   
 </article>
 
-    <div id="toc" class="toc-article">
-    <strong class="toc-title">文章目录</strong>
-    
-</div>
-<input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
-
-<script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
-<script>
-    var valueHide = "隐藏目录";
-    var valueShow = "显示目录";
-
-    if ($(".left-col").is(":hidden")) {
-        $("#tocButton").attr("value", valueShow);
-    }
-    $("#tocButton").click(function() {
-        if ($("#toc").is(":hidden")) {
-            $("#tocButton").attr("value", valueHide);
-            $("#toc").slideDown(320);
-        }
-        else {
-            $("#tocButton").attr("value", valueShow);
-            $("#toc").slideUp(350);
-        }
-    })
-    if ($(".toc").length < 1) {
-        $("#toc, #tocButton").hide();
-    }
-</script>
 
 
 
 
 
-<div class="bdsharebuttonbox">
-	<a href="#" class="fx fa-weibo bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
-	<a href="#" class="fx fa-weixin bds_weixin" data-cmd="weixin" title="分享到微信"></a>
-	<a href="#" class="fx fa-qq bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a>
-	<a href="#" class="fx fa-facebook-official bds_fbook" data-cmd="fbook" title="分享到Facebook"></a>
-	<a href="#" class="fx fa-twitter bds_twi" data-cmd="twi" title="分享到Twitter"></a>
-	<a href="#" class="fx fa-linkedin bds_linkedin" data-cmd="linkedin" title="分享到linkedin"></a>
-	<a href="#" class="fx fa-files-o bds_copy" data-cmd="copy" title="分享到复制网址"></a>
-</div>
-<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
 
 
 
-
-    
-      <div class="duoshuo" id="comments">
-    <!-- 多说评论框 start -->
-    <div class="ds-thread" data-thread-key="2016/10/13/jQuery选择器篇/" data-title="jQuery选择器" data-url="http://yoursite.com/2016/10/13/jQuery选择器篇/"></div>
-    <!-- 多说评论框 end -->
-    <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
-    <script type="text/javascript">
-    var duoshuoQuery = {short_name:"null"};
-    (function() {
-        var ds = document.createElement('script');
-        ds.type = 'text/javascript';ds.async = true;
-        ds.src = '/js/embed.js';
-        ds.charset = 'UTF-8';
-        (document.getElementsByTagName('head')[0] 
-         || document.getElementsByTagName('body')[0]).appendChild(ds);
-    })();
-    </script>
-    <!-- 多说公共JS代码 end -->
-</div>
-
-    
-
-
-
-    <div class="scroll" id="post-nav-button">
-        
-            <a href="/2016/10/15/jQuery操作DOM-节点/" title="上一篇: jQuery操作DOM(节点)">
-                <i class="fa fa-angle-left"></i>
-            </a>
-        
-        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
-        
-            <a href="/2016/10/13/JavaScript语句/" title="下一篇: JavaScript语句">
-                <i class="fa fa-angle-right"></i>
-            </a>
-        
+  
+    <article id="post-JavaScript语句" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/10/13/JavaScript语句/" class="article-date">
+      <time datetime="2016-10-13T07:00:00.000Z" itemprop="datePublished">2016-10-13</time>
+</a>
     </div>
-    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2016/10/26/字符串/">字符串</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/23/内置对象-数组/">内置对象-数组</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/22/日期对象/">日期对象</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/21/对象/">对象</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/20/函数/">函数</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/20/jQuery动画/">jQuery动画</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/19/jQuery事件/">jQuery事件</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/18/数组/">数组</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/16/jQuery操作样式/">jQuery操作样式</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/16/jQuery的DOM操作/">jQuery的DOM操作</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/15/jQuery操作DOM-节点/">jQuery操作DOM(节点)</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/13/jQuery选择器篇/">jQuery选择器</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/13/JavaScript语句/">JavaScript语句</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/13/JavaScript运算符/">JavaScript运算符</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/12/JavaScript变量/">JavaScript变量</a></li></ul>
-    <script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
-    <script>
-        $(".post-list").addClass("toc-article");
-        $(".post-list-item a").attr("target","_blank");
-        $("#post-nav-button > a:nth-child(2)").click(function() {
-            $(".fa-bars, .fa-times").toggle();
-            $(".post-list").toggle(300);
-            if ($(".toc").length > 0) {
-                $("#toc, #tocButton").toggle(200, function() {
-                    if ($(".switch-area").is(":visible")) {
-                        $("#tocButton").attr("value", valueHide);
-                        }
-                    })
-            }
-            else {
-            }
-        })
-    </script>
-
-
-
-    <script>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
         
-    </script>
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/10/13/JavaScript语句/">JavaScript语句</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <h6 id="条件判断语句"><a href="#条件判断语句" class="headerlink" title="条件判断语句"></a>条件判断语句</h6><ul>
+<li><p><code>if</code>   <code>else</code> 分为三种结构：</p>
+<ul>
+<li><p>单<code>if</code>结构：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">	if(条件)&#123;</div><div class="line">	满足条件执行，不满足继续向下</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p><code>if</code>..<code>else</code>：,</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">if(条件)&#123;</div><div class="line">	条件满足执行</div><div class="line">&#125;else&#123;</div><div class="line">	条件不满足执行</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>多个<code>if</code>..<code>else</code>的情况：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">  	if(条件)&#123;</div><div class="line"></div><div class="line">&#125;else if(条件)&#123;</div><div class="line"></div><div class="line">&#125;else&#123;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>switch case语句 （比较时是全等比較）</p>
+   <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">    	switch(传入值)&#123;</div><div class="line">			case 值:</div><div class="line">				执行内部代码；</div><div class="line">				break;</div><div class="line">			case 值:</div><div class="line">				执行内部代码；</div><div class="line">				break;</div><div class="line">			default:</div><div class="line">				以是代码都没执行时，执行此代码。</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>通常情况下我们使用 if else 进行范围比较，使用 switch case 进行单值比較。</p>
+</li>
+<li><p>三元运算符：</p>
+<ul>
+<li>bool表达式？表达式1：表达式2； bool表达式为真，执行表达式1否则执行表达式二</li>
+</ul>
+</li>
+</ul>
+<h6 id="循环语句"><a href="#循环语句" class="headerlink" title="循环语句"></a>循环语句</h6><ul>
+<li><p>for循环语法：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">for( 1循环变量初始化; 2循环条件; 4循环变量增减)&#123;</div><div class="line"> 	3循环内的代码</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<ul>
+<li>执行顺序  1 2 3 4 2 3 4 2 3 4;</li>
+</ul>
+</li>
+<li><p>while循环和 do while 循环</p>
+<ul>
+<li><p>while 循环:(先判断再执行)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">while (判断条件)&#123;</div><div class="line">	执行代码块;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>do while循环:（先执行再判断，比while循环多执行一次）</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">do &#123;</div><div class="line">	执行代码块</div><div class="line">&#125;</div><div class="line">while(判断条件);</div></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>（备注： for 循环和 while 循环 及 do..while循环可以互换使用的）。</p>
+</li>
+</ul>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript基础篇/">JavaScript基础篇</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-JavaScript运算符" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/10/13/JavaScript运算符/" class="article-date">
+      <time datetime="2016-10-13T02:26:21.000Z" itemprop="datePublished">2016-10-13</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/10/13/JavaScript运算符/">JavaScript运算符</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <ul>
+<li>算数运算符<ul>
+<li><code>+</code> <code>-</code> <code>*</code> <code>/</code> <code>%</code></li>
+</ul>
+</li>
+<li>一元运算符<ul>
+<li>一元指的是操作数的个数  <code>++</code>  <code>--</code><ul>
+<li>前置和后置不同:<ul>
+<li>前置:先自增（减） 然后参与当前运算</li>
+<li>先参与运算，再自增(减)</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>逻辑运算符</p>
+<ul>
+<li><p>操作数都是bool值时</p>
+<ul>
+<li>逻辑与(且) <code>&amp;&amp;</code>  两个操作数都为true结果为true</li>
+<li>逻辑或<code>||</code>    有一个为ture就为true，两个都为false，结果为false</li>
+<li>取反    <code>！</code></li>
+<li><p>操作数不是<code>bool</code>值时： 短路操作</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="comment">//短路操作的法则：隐式转换完毕后，哪个操作数可以决定表达式的结果，就返回哪个操作数</span></div><div class="line"> <span class="comment">//	true  &amp;&amp;  true</span></div><div class="line"><span class="built_in">console</span>.log(<span class="string">'a'</span> &amp;&amp; <span class="string">'b'</span>); <span class="comment">//true</span></div><div class="line">   <span class="comment">//	false &amp;&amp; true</span></div><div class="line">   <span class="built_in">console</span>.log(<span class="string">''</span> &amp;&amp;  <span class="string">'a'</span>);	<span class="comment">//false</span></div><div class="line">   <span class="comment">//	true &amp;&amp; false</span></div><div class="line">   <span class="built_in">console</span>.log(<span class="number">10</span> &amp;&amp; <span class="number">0</span>);	<span class="comment">//false</span></div><div class="line">   <span class="comment">//逻辑或的短路操作</span></div><div class="line">    <span class="comment">//	true  ||  true</span></div><div class="line"><span class="built_in">console</span>.log(<span class="string">'a'</span> || <span class="string">'b'</span>); <span class="comment">//true</span></div><div class="line">    <span class="comment">//	true  ||  true</span></div><div class="line"><span class="built_in">console</span>.log(<span class="string">''</span> &amp;&amp; <span class="number">0</span>); <span class="comment">// false</span></div></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>比较运算符</p>
+<ul>
+<li><code>&gt;</code>    <code>&lt;</code>    <code>&gt;=</code>    <code>&lt;=</code>    <code>!=</code>    <code>!==</code>    返回结果为bool类型</li>
+</ul>
+</li>
+<li>赋值运算符<ul>
+<li><code>=</code> <code>+=</code>  <code>-=</code>  <code>*=</code>  <code>/=</code> <code>%=</code></li>
+</ul>
+</li>
+<li>相等运算符<ul>
+<li><code>==</code> 值相等 <code>===</code> 值和类型全等</li>
+</ul>
+</li>
+<li>运算符的优先级<ul>
+<li>从高到低：<code>()</code>优先级最高 &gt; 一元运算符（<code>++ --</code>）&gt;算数运算符（先<code>*/%</code>后<code>+-</code>）-&gt; 关系运算符（<code>&gt; &gt;= &lt; &lt;=</code>）&gt; 相等运算符（<code>== ！= === ！==</code>）&gt;逻辑运算符（先 <code>&amp;&amp;</code> 后<code>||</code>）</li>
+</ul>
+</li>
+</ul>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript基础篇/">JavaScript基础篇</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-JavaScript变量" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/10/12/JavaScript变量/" class="article-date">
+      <time datetime="2016-10-12T06:25:32.000Z" itemprop="datePublished">2016-10-12</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/10/12/JavaScript变量/">JavaScript变量</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <ul>
+<li>变量的作用：存储数据</li>
+<li>数据分为两种：<ul>
+<li>固定数据：固定的数据保存在硬盘中的。</li>
+<li>临时数据：临时的数据是保存在内存中。</li>
+<li>数据是保存在内存中的某一个区域的，每个区域对应一个内存地址，我们想要使用某个区域中的数据，就需要找到指定的地址，使用起来不方便。我们可以通过变量，变量实际上保存的是某个数据的地址，我们使用变量实际上就是使用变量中保存的地址中的数据。</li>
+</ul>
+</li>
+<li>变量的使用<ul>
+<li>变量的声明：<ul>
+<li>var 变量名，<code>var—variable</code>可变的  js是弱类型语言，变量的类型不定，可变</li>
+</ul>
+</li>
+<li>变量的命名规则：<ul>
+<li>1、不能使用关键字和保留字</li>
+<li>2、开头可以使用<code>_$</code>英文字母</li>
+<li>3、除了开头以外可以使用数字</li>
+<li>4、不能包含空格</li>
+</ul>
+<ul>
+<li>5、严格区分大小写;</li>
+</ul>
+</li>
+<li>变量的赋值和初始化<ul>
+<li>初始化：在变量声明同时进行赋值 <code>var num = 100</code>;</li>
+<li>赋值： <code>var num = 100;   num = 10;</code>  由于js是弱类型，除了保存数值型的变量也可以保存其他类型数据;但是我们不推荐这样做，可能会对使用造成不良影响。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>变量的类型</p>
+<ul>
+<li><p>基本数据类型：字符串<code>(string)</code>; 数值型<code>(number)</code>; 布尔类型<code>(boolean)</code>;   <code>undefined</code>;  <code>null</code>.</p>
+<ul>
+<li>字符串的值：使用成对的双引号或者单引号进行包裹(js中所有的标点符号必须为英文半角);</li>
+<li>数值型的值：<code>例如:0-9,0.1 0.2</code><ul>
+<li><code>NaN</code> <code>(not a number)</code> 不是一个数值类型</li>
+<li><code>isNaN</code>(数据);  是不是不是数  如果判断的数据不是数值型返回true</li>
+<li><code>Infinity</code> 表示无穷大，超出了js能承受的最大值</li>
+<li>-Infinity 表示无穷小</li>
+</ul>
+</li>
+<li>布尔类型<ul>
+<li><code>true</code> 真</li>
+<li><code>false</code> 假</li>
+</ul>
+</li>
+<li>undefined<ul>
+<li><code>defined</code> 定义</li>
+<li><code>undefined</code> 出现的情况：  变量声明未赋值</li>
+</ul>
+</li>
+<li><p>null 空</p>
+<ul>
+<li>undefined 与 null  相等不全等<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">console.log ( undefined == null); // true</div><div class="line">   console.log ( undefined === null); // false</div></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>数据类型判断</p>
+<ul>
+<li><code>typeof</code> 变量   / <code>typeof</code>(变量)</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>变量的类型转换</p>
+<ul>
+<li><p>将其他类型转换为字符串类型：</p>
+<ul>
+<li><p>强制转换</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">    	 <span class="number">1</span>、toString()</div><div class="line">变量.toString()</div><div class="line"><span class="number">2</span>、<span class="built_in">String</span>()</div><div class="line"><span class="literal">undefined</span>和<span class="literal">null</span>不支持toString()方法</div></pre></td></tr></table></figure>
+</li>
+<li><p>隐式转换</p>
+<ul>
+<li>通过任意类型+任意字符串操作可以将其他类型转换为字符串类型</li>
+<li>在使用+操作的时候为了不改变数据的原有内容，使用空字符串</li>
+<li>空字符串中不能有任何内容</li>
+</ul>
+</li>
+<li>基本类型值的不可变性<ul>
+<li>通过类型转换或者重新赋值都无法修改基本类型的原有值。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>将其他类型转换为数值型：</p>
+<ul>
+<li>强制转换<ul>
+<li><code>Number()</code> 只能转换全部是数值型的字符串</li>
+<li><code>parseInt()</code> 可以转换前半部分为数字的字符串，转换结果为整数</li>
+<li><code>parseFloat()</code>可以包含小数</li>
+</ul>
+</li>
+<li>隐式转换<ul>
+<li><code>*</code>/ % 可以进行转换</li>
+<li><code>+</code>操作需要将+号放在数据前进行使用。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>将其他类型转换为布尔类型：<ul>
+<li>强制转换<ul>
+<li><code>Boolean()</code><ul>
+<li><code>0</code> <code>undefined</code> <code>null</code> <code>“”</code> <code>NaN</code> 转换值为<code>false</code></li>
+<li>有值的字符串 有值的数 转换为<code>true</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>隐式转换<ul>
+<li>！！ 可以进行隐式转换</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><code>undefined</code>和<code>null</code>类型只有一个值，不需要转换。</li>
+</ul>
+</li>
+<li>交换两个变量的值  <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> a = <span class="number">1</span>;</div><div class="line"><span class="keyword">var</span> b = <span class="number">2</span>;</div><div class="line"><span class="comment">//定义一个中转变量</span></div><div class="line"><span class="keyword">var</span> temp = a;</div><div class="line">a = b;</div><div class="line">b = temp;</div><div class="line"><span class="built_in">console</span>.log(a); <span class="comment">//2</span></div><div class="line"><span class="built_in">console</span>.log(b); <span class="comment">//1</span></div></pre></td></tr></table></figure>
+</li>
+</ul>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript基础篇/">JavaScript基础篇</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+  
+    <nav id="page-nav">
+      <a class="extend prev" rel="prev" href="/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
+    </nav>
+  
 </div>
       <footer id="footer">
     <div class="outer">
