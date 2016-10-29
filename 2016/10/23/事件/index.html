@@ -3,33 +3,39 @@
 <head>
   <meta charset="utf-8">
   
-  <title>jQuery动画 | 廖卫红</title>
+  <title>事件 | 廖卫红</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="通过下拉菜单引入动画。
-jquery提供了三组动画，这些动画都是标准的、有规律的效果，jquery还提供了自定        义动画的功能。
-显示(show)与隐藏(hide)是一组动画：
+  <meta name="description" content="DOM事件
 
-show方法详解：
-123456   show([speed], [callback]);//speed(可选)：动画的执行时间// 1.如果不传，就没有动画效果。//2.毫秒值(比如1000),动画在10">
+事件分为三个部分：事件源（谁）事件类型（干了什么）事件处理程序（怎么样）
+123   事件源.事件类型 = function()&amp;#123;	//事件处理程序一些代码，&amp;#125;;
+
+事件类型点击事件   onclick鼠标移入   onmouseover鼠标移出   onmouseout
+
+事件处理程序事件处理程序也是一个函数，这个函数不是由调用触发的，而是由事件的触发而执行的">
 <meta property="og:type" content="article">
-<meta property="og:title" content="jQuery动画">
-<meta property="og:url" content="http://yoursite.com/2016/10/20/jQuery动画/index.html">
+<meta property="og:title" content="事件">
+<meta property="og:url" content="http://yoursite.com/2016/10/23/事件/index.html">
 <meta property="og:site_name" content="廖卫红">
-<meta property="og:description" content="通过下拉菜单引入动画。
-jquery提供了三组动画，这些动画都是标准的、有规律的效果，jquery还提供了自定        义动画的功能。
-显示(show)与隐藏(hide)是一组动画：
+<meta property="og:description" content="DOM事件
 
-show方法详解：
-123456   show([speed], [callback]);//speed(可选)：动画的执行时间// 1.如果不传，就没有动画效果。//2.毫秒值(比如1000),动画在10">
-<meta property="og:updated_time" content="2016-10-24T13:19:06.056Z">
+事件分为三个部分：事件源（谁）事件类型（干了什么）事件处理程序（怎么样）
+123   事件源.事件类型 = function()&amp;#123;	//事件处理程序一些代码，&amp;#125;;
+
+事件类型点击事件   onclick鼠标移入   onmouseover鼠标移出   onmouseout
+
+事件处理程序事件处理程序也是一个函数，这个函数不是由调用触发的，而是由事件的触发而执行的">
+<meta property="og:updated_time" content="2016-10-27T13:42:05.742Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="jQuery动画">
-<meta name="twitter:description" content="通过下拉菜单引入动画。
-jquery提供了三组动画，这些动画都是标准的、有规律的效果，jquery还提供了自定        义动画的功能。
-显示(show)与隐藏(hide)是一组动画：
+<meta name="twitter:title" content="事件">
+<meta name="twitter:description" content="DOM事件
 
-show方法详解：
-123456   show([speed], [callback]);//speed(可选)：动画的执行时间// 1.如果不传，就没有动画效果。//2.毫秒值(比如1000),动画在10">
+事件分为三个部分：事件源（谁）事件类型（干了什么）事件处理程序（怎么样）
+123   事件源.事件类型 = function()&amp;#123;	//事件处理程序一些代码，&amp;#125;;
+
+事件类型点击事件   onclick鼠标移入   onmouseover鼠标移出   onmouseout
+
+事件处理程序事件处理程序也是一个函数，这个函数不是由调用触发的，而是由事件的触发而执行的">
   
     <link rel="alternative" href="/atom.xml" title="廖卫红" type="application/atom+xml">
   
@@ -247,11 +253,11 @@ show方法详解：
         </header>                
     </div>
 </nav>
-      <div class="body-wrap"><article id="post-jQuery动画" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-事件" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/10/20/jQuery动画/" class="article-date">
-      <time datetime="2016-10-20T01:49:01.000Z" itemprop="datePublished">2016-10-20</time>
+      <a href="/2016/10/23/事件/" class="article-date">
+      <time datetime="2016-10-23T12:51:40.000Z" itemprop="datePublished">2016-10-23</time>
 </a>
     </div>
   
@@ -264,7 +270,7 @@ show方法详解：
         
   
     <h1 class="article-title" itemprop="name">
-      jQuery动画
+      事件
     </h1>
   
 
@@ -275,7 +281,7 @@ show方法详解：
 
         
     <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/jQuery基础篇/">jQuery基础篇</a></li></ul>
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript基础篇/">JavaScript基础篇</a></li></ul>
     </div>
 
         <div class="clearfix"></div>
@@ -286,62 +292,40 @@ show方法详解：
       
           
         <ul>
-<li>通过下拉菜单引入动画。</li>
-<li>jquery提供了三组动画，这些动画都是标准的、有规律的效果，jquery还提供了自定        义动画的功能。</li>
-<li><p>显示(show)与隐藏(hide)是一组动画：</p>
+<li><p>DOM事件</p>
 <ul>
-<li><p>show方法详解：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">   show([speed], [callback]);</div><div class="line">//speed(可选)：动画的执行时间</div><div class="line">// 1.如果不传，就没有动画效果。</div><div class="line">//2.毫秒值(比如1000),动画在1000毫秒执行完成(推荐)</div><div class="line">//3.固定字符串，slow(200)、normal(400)、fast(600)，如果传其他字符串,则默认为normal。</div><div class="line">//callback(可选):执行完动画后执行的回调函数</div></pre></td></tr></table></figure>
+<li><p>事件分为三个部分：<br>事件源（谁）<br>事件类型（干了什么）<br>事件处理程序（怎么样）</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">   事件源.事件类型 = function()&#123;</div><div class="line">	//事件处理程序一些代码，</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
 </li>
-<li><p>hide方法详解：<br>与<code>show</code>方法的用法完全一致。<br><code>show/hide：</code>修改的是元素的<code>width、height、opacity</code>。</p>
+<li><p>事件类型<br>点击事件   onclick<br>鼠标移入   onmouseover<br>鼠标移出   onmouseout</p>
+</li>
+<li><p>事件处理程序<br>事件处理程序也是一个函数，这个函数不是由调用触发的，而是由事件的触发而执行的。<br>函数的定义：函数是由事件驱动的或在调用时执行的可重复使用的代码块。<br>在事件处理程序中，this就指向事件源。</p>
 </li>
 </ul>
 </li>
-<li><p>滑入与滑出</p>
+<li><p>标签默认事件</p>
 <ul>
-<li>滑入<code>slideUp)</code>滑出<code>slideDown)</code>一组动画，效果与卷帘门类似<br><code>slideUp/slideDown,</code>用方法与<code>how/hide</code>本一致。</li>
+<li>某些标签具有默认的效果，例如a标签的跳转，有时候我们不想要这种效果，可以在事件最后加上return false;<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">link.onclick = function() &#123;</div><div class="line">   	alert(&quot;hello,world!&quot;);</div><div class="line">       //通过return false取消标签的默认效果</div><div class="line">       return false;</div><div class="line">   &#125;</div></pre></td></tr></table></figure>
+</li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">   slideUp(speed, callback);</div><div class="line">//speed(可选)：动画的执行时间</div><div class="line">//如果不传，默认为normal，注意区分show/hide。</div><div class="line">//毫秒值(比如1000),动画在1000毫秒执行完成(推荐)</div><div class="line">  	//固定字符串，slow(200)、normal(400)、fast(600)</div><div class="line">//callback(可选):执行完动画后执行的回调函数</div><div class="line">       </div><div class="line">   //滑出切换</div><div class="line">$(selector).slideToggle(speed,callback);</div><div class="line">//如果是隐藏状态，那么执行slideDown操作，如果是显示状态，那么执行	slideUp操作。</div></pre></td></tr></table></figure>
+</li>
+<li><p>循环添加事件</p>
 <ul>
-<li><code>slideUp/slideDown：</code>改的是元素的<code>height</code>;</li>
+<li>当我们进行循环添加事件的时候，在事件内部不能使用i，因为i的值已经是循环的结束条件那个值了（根据循环设置的具体情况而定）。可以使用this进行替代。</li>
 </ul>
 </li>
-<li><p>淡入与淡出</p>
+<li><p>排他思想<br>  在点击按钮变色案例中，我们不能确定哪个按钮已经有了颜色，所以我们清除掉所有按钮的颜色，然后再给自己设置。<br>  简单来说，就是干掉所有人，然后给自己添加设置。<br>  举个栗子（隔行变色）：</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div></pre></td><td class="code"><pre><div class="line">   &lt;style&gt;</div><div class="line">      * &#123;</div><div class="line">          margin: 0;</div><div class="line">          padding: 0;</div><div class="line">      &#125;</div><div class="line"></div><div class="line">      ul &#123;</div><div class="line">          list-style: none;</div><div class="line">          height: 300px;</div><div class="line">          width: 400px;</div><div class="line">      &#125;</div><div class="line"></div><div class="line">      li &#123;</div><div class="line">          height: 30px;</div><div class="line">      &#125;</div><div class="line"></div><div class="line">      .current&#123;</div><div class="line">          background-color: #4d95ff !important;</div><div class="line">      &#125;</div><div class="line"></div><div class="line">  &lt;/style&gt;</div><div class="line"></div><div class="line">  &lt;body&gt;</div><div class="line">  	&lt;ul id=&quot;list&quot;&gt;</div><div class="line">  		&lt;li&gt;&lt;/li&gt;</div><div class="line">  		&lt;li&gt;&lt;/li&gt;</div><div class="line">  		&lt;li&gt;&lt;/li&gt;</div><div class="line">  		&lt;li&gt;&lt;/li&gt;</div><div class="line">  		&lt;li&gt;&lt;/li&gt;</div><div class="line">  		&lt;li&gt;&lt;/li&gt;</div><div class="line">  		&lt;li&gt;&lt;/li&gt;</div><div class="line">&lt;/ul&gt;</div><div class="line">  &lt;/body&gt;</div><div class="line"></div><div class="line">  //script代码</div><div class="line"> 	 var list = document.getElementById(&quot;list&quot;);</div><div class="line">  	var lis = list.getElementsByTagName(&quot;li&quot;);</div><div class="line"></div><div class="line"> 		 for (var i = 0; i &lt; lis.length; i++) &#123;</div><div class="line">      	if (i % 2 == 0) &#123;</div><div class="line">         	 	lis[i].style.backgroundColor = &quot;#C2DFE8&quot;;</div><div class="line">     		 &#125; else &#123;</div><div class="line">        		  lis[i].style.backgroundColor = &quot;#48D6FF&quot;;</div><div class="line">    		  &#125;</div><div class="line"></div><div class="line">//  给每一个li添加移入移出事件</div><div class="line">      	lis[i].onmouseover = function () &#123;</div><div class="line">          //给当前li添加类名</div><div class="line">          this.className = &quot;current&quot;;</div><div class="line">      &#125;;</div><div class="line">      lis[i].onmouseout = function () &#123;</div><div class="line">          this.className = &quot;&quot;;</div><div class="line">      &#125;</div><div class="line">  &#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>焦点事件</p>
 <ul>
-<li><p><code>fadeIn/fadeOut</code>使用方法与<code>show/hide、slideDown/slideUp</code>一致。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">   fadeIn(speed, callback);</div><div class="line"><span class="comment">//speed(可选)：动画的执行时间</span></div><div class="line"><span class="comment">// 1.如果不传，默认是normal。</span></div><div class="line"> <span class="comment">//2.毫秒值(比如1000),动画在1000毫秒执行完成(推荐)</span></div><div class="line">  	<span class="comment">//3.固定字符串，slow(200)、normal(400)、fast(600)</span></div><div class="line"><span class="comment">//callback(可选):执行完动画后执行的回调函数</span></div><div class="line"><span class="comment">//淡入淡出切换：</span></div><div class="line">fadeToggle(speed, callback);</div><div class="line"><span class="comment">//如果当前元素处于隐藏状态，那么执行fadeIn操作，如果处于显示状态，那么执行	fadeOut操作。</span></div></pre></td></tr></table></figure>
-</li>
-<li><p>淡入淡出到某个值(fadeTo)与淡入淡出的区别：淡入淡出只能控制元素的不透明度从 完全不透明 到完全透明；而fadeTo可以指定元素不透明度的具体值。并且时间参数是必需的！</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">   fadeTo(speed, value, callback)<span class="comment">//可以设置具体的透明度</span></div><div class="line"><span class="comment">//speed（必须）</span></div><div class="line"><span class="comment">//value  0-1之间的数值(比如0.4)，表示淡到某一个值。</span></div><div class="line"><span class="comment">//callback(可选) 回调函数</span></div></pre></td></tr></table></figure>
-</li>
-<li><p>fade系列方法：修改的是元素的<code>opacity;</code></p>
+<li>onfocus   文本框获取焦点时触发事件</li>
+<li>onblur   失去焦点时触发事件<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">   	html代码：</div><div class="line">  	&lt;input type=&quot;text&quot; id=&quot;ipt&quot;/&gt;</div><div class="line"></div><div class="line">script代码：</div><div class="line">   var ipt = document.getElementById(&quot;ipt&quot;);</div><div class="line"></div><div class="line">  	ipt.onfocus = function () &#123;</div><div class="line">      console.log(&quot;hello,world!&quot;);</div><div class="line">  	&#125;;</div><div class="line"></div><div class="line">   ipt.onblur = function () &#123;</div><div class="line">    console.log(this.value);</div><div class="line">   &#125;;</div></pre></td></tr></table></figure>
 </li>
 </ul>
 </li>
-<li>动画总结：<br>1.jQuery给我们提供了三组动画，show/hide、slideUp/slideDown、fadeIn/fadeOut<br>2.动画切换方法：slideToggle、fadeToggle，注意：show和hide没有切换的方法。<br>3.淡入淡出到某个值：fadeTo方法。<br>4.show/slideDown/fadeIn三个是显示效果、hide/slideUp/fadeOut三个是隐藏效果。<br>5.show/hide修改的是元素的height,width,opacity。slide系列方法修改的是元素的height。fade系列方法修改的是元素的opacity。这三种方法修改的这些值，都是带数字的，因为带了数字才能做渐变。</li>
-</ul>
-<h6 id="jQuery自定义动画"><a href="#jQuery自定义动画" class="headerlink" title="jQuery自定义动画"></a>jQuery自定义动画</h6><ul>
-<li><p>animate：自定义动画</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">$(selector).animate(&#123;params&#125;,[speed],[callback]);</div><div class="line"><span class="comment">// &#123;params&#125;：要执行动画的CSS属性，带数字（必选）</span></div><div class="line"><span class="comment">// speed：执行动画时长（可选）</span></div><div class="line"><span class="comment">// callback：动画执行完后立即执行的回调函数（可选）</span></div></pre></td></tr></table></figure>
-</li>
-<li><p>动画支持的属性：    </p>
-<ul>
-<li><a href="http://www.w3school.com.cn/jquery/effect_animate.asp" target="_blank" rel="external">http://www.w3school.com.cn/jquery/effect_animate.asp</a></li>
-</ul>
-</li>
-<li>easing参数<br>控制动画在不同元素的速度，默认为“swing”<br>“swing”：在开头和结尾移动慢，在中间移动速度快<br>“linear”：匀速移动</li>
-<li>动画队列问题<ul>
-<li>在同一个元素上执行多个动画，那么对于这个动画来说，后面的动画会被放到动画队列中，等前面的动画执行完成了才会执行;</li>
-</ul>
-</li>
-<li>停止动画<ul>
-<li>stop方法：停止动画效果<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">stop(clearQueue, jumpToEnd);</div><div class="line"><span class="comment">//第一个参数：是否清除队列</span></div><div class="line"><span class="comment">//第二个参数：是否跳转到最终效果</span></div></pre></td></tr></table></figure>
-</li>
-</ul>
-</li>
-</ul>
-<ul>
-<li>最常用的停止动画：stop();</li>
+<li><p>表单的常用属性：<br>  input获取内部文本 使用value  ipt.value;<br>  禁用表单 ipt.disabled 可以给表单禁用。设置值为true表示禁用，false表示启用;<br>  复选框选中  cb.checked   值为true表示选中 值为false表示没选中;<br>  下拉菜单选中  doudou.selected  值为true表示选中，为false表示没选中.<br>  举个栗子（模拟表单验证）：</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div></pre></td><td class="code"><pre><div class="line">//CSS样式省略。。。</div><div class="line">   //html结构：</div><div class="line">   &lt;div class=&quot;container&quot;&gt;</div><div class="line">   用户名：&lt;input id=&quot;ipt&quot; type=&quot;text&quot; value=&quot;请输入用户名&quot;&gt;</div><div class="line">   &lt;span id=&quot;span&quot;&gt;请输入admin&lt;/span&gt;</div><div class="line">   </div><div class="line">   //script 代码：</div><div class="line">   //1 获取页面元素</div><div class="line">       var ipt = document.getElementById(&quot;ipt&quot;);</div><div class="line">       var span = document.getElementById(&quot;span&quot;);</div><div class="line"></div><div class="line">       //2 input添加事件</div><div class="line">       //3 当input获得焦点时做一些事</div><div class="line">       ipt.onfocus = function () &#123;</div><div class="line">           //4 当ipt的值为默认值时，先清空value然后显示提示词</div><div class="line">           if (ipt.value == &quot;请输入用户名&quot;) &#123;</div><div class="line">               //让span显示</div><div class="line">               span.className = &quot;show&quot;;</div><div class="line">               ipt.value = &quot;&quot;;</div><div class="line"></div><div class="line">           &#125;</div><div class="line">       &#125;;</div><div class="line"></div><div class="line">       //失去焦点事件</div><div class="line">       ipt.onblur = function () &#123;</div><div class="line">           //当文本为空，将ipt.value还原为原始值，同时让span不显示</div><div class="line">           if(ipt.value == &quot;&quot;)&#123;</div><div class="line">               span.className = &quot;&quot;;</div><div class="line">               ipt.value = &quot;请输入用户名&quot;;</div><div class="line">               span.innerHTML = &quot;请输入admin&quot;;</div><div class="line">           &#125;else if(ipt.value ==&quot;admin&quot;)&#123;</div><div class="line">               //对了就让span的类名设置为right</div><div class="line">               span.className = &quot;right&quot;;</div><div class="line">               span.innerHTML = &quot;恭喜你输入正确!&quot;;</div><div class="line">           &#125;else&#123;</div><div class="line">               //输入错误</div><div class="line">               span.className = &quot;wrong&quot;;</div><div class="line">               span.innerHTML = &quot;输入错误&quot;;</div><div class="line">           &#125;</div><div class="line">       &#125;;</div></pre></td></tr></table></figure></li>
 </ul>
 
       
@@ -351,13 +335,13 @@ show方法详解：
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/2016/10/20/jQuery动画/">jQuery动画</a></p>
+        <p><span>本文标题:</span><a href="/2016/10/23/事件/">事件</a></p>
         <p><span>文章作者:</span><a href="/" title="访问 weihong Liao 的个人博客">weihong Liao</a></p>
-        <p><span>发布时间:</span>2016年10月20日 - 09时49分</p>
-        <p><span>最后更新:</span>2016年10月24日 - 21时19分</p>
+        <p><span>发布时间:</span>2016年10月23日 - 20时51分</p>
+        <p><span>最后更新:</span>2016年10月27日 - 21时42分</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2016/10/20/jQuery动画/" title="jQuery动画">http://yoursite.com/2016/10/20/jQuery动画/</a>
-            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2016/10/20/jQuery动画/　　作者: weihong Liao" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <span>原始链接:</span><a class="post-url" href="/2016/10/23/事件/" title="事件">http://yoursite.com/2016/10/23/事件/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2016/10/23/事件/　　作者: weihong Liao" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script src="/js/clipboard.min.js"></script>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
@@ -370,18 +354,18 @@ show方法详解：
 
 <nav id="article-nav">
   
-    <a href="/2016/10/20/函数/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2016/10/24/BOM/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption"><</strong>
       <div class="article-nav-title">
         
-          函数
+          BOM
         
       </div>
     </a>
   
   
-    <a href="/2016/10/19/jQuery事件/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">jQuery事件</div>
+    <a href="/2016/10/23/DOM/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">DOM</div>
       <strong class="article-nav-caption">></strong>
     </a>
   
@@ -392,7 +376,7 @@ show方法详解：
 
     <div id="toc" class="toc-article">
     <strong class="toc-title">文章目录</strong>
-    <ol class="toc"><li class="toc-item toc-level-6"><a class="toc-link" href="#jQuery自定义动画"><span class="toc-number">1.</span> <span class="toc-text">jQuery自定义动画</span></a></li></ol>
+    
 </div>
 <input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
 
@@ -440,7 +424,7 @@ show方法详解：
     
       <div class="duoshuo" id="comments">
     <!-- 多说评论框 start -->
-    <div class="ds-thread" data-thread-key="2016/10/20/jQuery动画/" data-title="jQuery动画" data-url="http://yoursite.com/2016/10/20/jQuery动画/"></div>
+    <div class="ds-thread" data-thread-key="2016/10/23/事件/" data-title="事件" data-url="http://yoursite.com/2016/10/23/事件/"></div>
     <!-- 多说评论框 end -->
     <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
     <script type="text/javascript">
@@ -463,13 +447,13 @@ show方法详解：
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2016/10/20/函数/" title="上一篇: 函数">
+            <a href="/2016/10/24/BOM/" title="上一篇: BOM">
                 <i class="fa fa-angle-left"></i>
             </a>
         
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
         
-            <a href="/2016/10/19/jQuery事件/" title="下一篇: jQuery事件">
+            <a href="/2016/10/23/DOM/" title="下一篇: DOM">
                 <i class="fa fa-angle-right"></i>
             </a>
         

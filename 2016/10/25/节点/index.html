@@ -3,33 +3,30 @@
 <head>
   <meta charset="utf-8">
   
-  <title>jQuery动画 | 廖卫红</title>
+  <title>节点 | 廖卫红</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="通过下拉菜单引入动画。
-jquery提供了三组动画，这些动画都是标准的、有规律的效果，jquery还提供了自定        义动画的功能。
-显示(show)与隐藏(hide)是一组动画：
+  <meta name="description" content="document是dom中的顶级对象。dom把html页面看作一个树结构。dom树中的每一个部分我们都称为节点。
+节点访问关系：
 
-show方法详解：
-123456   show([speed], [callback]);//speed(可选)：动画的执行时间// 1.如果不传，就没有动画效果。//2.毫秒值(比如1000),动画在10">
+父子访问关系：通过parentNode可以访问某个节点的父节点；通过childNodes可以得到某个节点的所有子节点，包含文本节点（空格和换行）；通过children可以得到某个节点中的所有元素子节点（不是标准方法，但是所有浏览器    都支持，可放心使用）。
+获取">
 <meta property="og:type" content="article">
-<meta property="og:title" content="jQuery动画">
-<meta property="og:url" content="http://yoursite.com/2016/10/20/jQuery动画/index.html">
+<meta property="og:title" content="节点">
+<meta property="og:url" content="http://yoursite.com/2016/10/25/节点/index.html">
 <meta property="og:site_name" content="廖卫红">
-<meta property="og:description" content="通过下拉菜单引入动画。
-jquery提供了三组动画，这些动画都是标准的、有规律的效果，jquery还提供了自定        义动画的功能。
-显示(show)与隐藏(hide)是一组动画：
+<meta property="og:description" content="document是dom中的顶级对象。dom把html页面看作一个树结构。dom树中的每一个部分我们都称为节点。
+节点访问关系：
 
-show方法详解：
-123456   show([speed], [callback]);//speed(可选)：动画的执行时间// 1.如果不传，就没有动画效果。//2.毫秒值(比如1000),动画在10">
-<meta property="og:updated_time" content="2016-10-24T13:19:06.056Z">
+父子访问关系：通过parentNode可以访问某个节点的父节点；通过childNodes可以得到某个节点的所有子节点，包含文本节点（空格和换行）；通过children可以得到某个节点中的所有元素子节点（不是标准方法，但是所有浏览器    都支持，可放心使用）。
+获取">
+<meta property="og:updated_time" content="2016-10-28T13:59:52.667Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="jQuery动画">
-<meta name="twitter:description" content="通过下拉菜单引入动画。
-jquery提供了三组动画，这些动画都是标准的、有规律的效果，jquery还提供了自定        义动画的功能。
-显示(show)与隐藏(hide)是一组动画：
+<meta name="twitter:title" content="节点">
+<meta name="twitter:description" content="document是dom中的顶级对象。dom把html页面看作一个树结构。dom树中的每一个部分我们都称为节点。
+节点访问关系：
 
-show方法详解：
-123456   show([speed], [callback]);//speed(可选)：动画的执行时间// 1.如果不传，就没有动画效果。//2.毫秒值(比如1000),动画在10">
+父子访问关系：通过parentNode可以访问某个节点的父节点；通过childNodes可以得到某个节点的所有子节点，包含文本节点（空格和换行）；通过children可以得到某个节点中的所有元素子节点（不是标准方法，但是所有浏览器    都支持，可放心使用）。
+获取">
   
     <link rel="alternative" href="/atom.xml" title="廖卫红" type="application/atom+xml">
   
@@ -247,11 +244,11 @@ show方法详解：
         </header>                
     </div>
 </nav>
-      <div class="body-wrap"><article id="post-jQuery动画" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-节点" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/10/20/jQuery动画/" class="article-date">
-      <time datetime="2016-10-20T01:49:01.000Z" itemprop="datePublished">2016-10-20</time>
+      <a href="/2016/10/25/节点/" class="article-date">
+      <time datetime="2016-10-25T12:59:43.000Z" itemprop="datePublished">2016-10-25</time>
 </a>
     </div>
   
@@ -264,7 +261,7 @@ show方法详解：
         
   
     <h1 class="article-title" itemprop="name">
-      jQuery动画
+      节点
     </h1>
   
 
@@ -275,7 +272,7 @@ show方法详解：
 
         
     <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/jQuery基础篇/">jQuery基础篇</a></li></ul>
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript基础篇/">JavaScript基础篇</a></li></ul>
     </div>
 
         <div class="clearfix"></div>
@@ -286,62 +283,47 @@ show方法详解：
       
           
         <ul>
-<li>通过下拉菜单引入动画。</li>
-<li>jquery提供了三组动画，这些动画都是标准的、有规律的效果，jquery还提供了自定        义动画的功能。</li>
-<li><p>显示(show)与隐藏(hide)是一组动画：</p>
+<li>document是dom中的顶级对象。dom把html页面看作一个树结构。dom树中的每一个部分我们都称为节点。</li>
+<li><p>节点访问关系：</p>
 <ul>
-<li><p>show方法详解：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">   show([speed], [callback]);</div><div class="line">//speed(可选)：动画的执行时间</div><div class="line">// 1.如果不传，就没有动画效果。</div><div class="line">//2.毫秒值(比如1000),动画在1000毫秒执行完成(推荐)</div><div class="line">//3.固定字符串，slow(200)、normal(400)、fast(600)，如果传其他字符串,则默认为normal。</div><div class="line">//callback(可选):执行完动画后执行的回调函数</div></pre></td></tr></table></figure>
+<li>父子访问关系：<br>通过parentNode可以访问某个节点的父节点；<br>通过childNodes可以得到某个节点的所有子节点，包含文本节点（空格和换行）；<br>通过children可以得到某个节点中的所有元素子节点（不是标准方法，但是所有浏览器    都支持，可放心使用）。</li>
+<li><p>获取子节点<br>node.firstChild  表示第一个子节点（包含文本节点）<br>node.lastChild  最后一个子节点（包含文本节点）</p>
 </li>
-<li><p>hide方法详解：<br>与<code>show</code>方法的用法完全一致。<br><code>show/hide：</code>修改的是元素的<code>width、height、opacity</code>。</p>
+<li><p>获取元素子节点：ie低版本不支持<br>node.firstElementChild 第一个元素子节点，IE低版本不支持；<br>node.lastElementChild 最后一个元素子节点，IE低版本不支持；<br>不加element所有版本都支持，但会获取包括换行空格内的文本节点。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">   //html代码:</div><div class="line">   &lt;ul id=&quot;list&quot;&gt;</div><div class="line">   	&lt;li&gt;&lt;/li&gt;</div><div class="line">   	&lt;li&gt;&lt;/li&gt;</div><div class="line">       &lt;li&gt;&lt;/li&gt;</div><div class="line">&lt;/ul&gt;</div><div class="line">   //script代码：</div><div class="line">     var list = document.getElementById(&quot;list&quot;);</div><div class="line">   //获取第一个子节点</div><div class="line">   //console.log(list.firstChild);</div><div class="line">   console.log(list.firstElementChild);</div><div class="line"></div><div class="line">   //获取最后一个子节点</div><div class="line">   //console.log(list.lastChild);</div><div class="line">   console.log(list.lastElementChild);</div></pre></td></tr></table></figure>
+</li>
+<li><p>兄弟访问关系：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div></pre></td><td class="code"><pre><div class="line">    //html代码：</div><div class="line">    &lt;ul id=&quot;list&quot;&gt;</div><div class="line">    	&lt;li&gt;&lt;/li&gt;</div><div class="line">        &lt;li&gt;&lt;/li&gt;</div><div class="line">        &lt;li id=&quot;current&quot;&gt;hello,world!&lt;/li&gt;</div><div class="line">        &lt;li&gt;&lt;/li&gt;</div><div class="line">&lt;/ul&gt;</div><div class="line"></div><div class="line">	//script代码：</div><div class="line">     var current = document.getElementById(&quot;current&quot;);</div><div class="line"></div><div class="line">    //获取前一个兄弟节点</div><div class="line">    console.log(current.previousSibling);</div><div class="line">    //获取前一个兄弟元素节点</div><div class="line">    console.log(current.previousElementSibling);</div><div class="line"></div><div class="line">    //获取下一个兄弟节点</div><div class="line">    console.log(current.nextSibling);</div><div class="line">    //获取下一个兄弟元素节点</div><div class="line">    console.log(current.nextElementSibling);</div><div class="line"></div><div class="line">    //栗子：找到所有兄弟节点</div><div class="line">    //先找到父节点，再找子节点，再去掉自己</div><div class="line">    function getSilbing(node) &#123;</div><div class="line">        var father = node.parentNode;</div><div class="line">        var allXd = father.children;</div><div class="line">        var resultArr = [];</div><div class="line">        for (var i = 0; i &lt; allXd.length; i++) &#123;</div><div class="line">            if (allXd[i] != node) &#123;</div><div class="line">                //将满足条件的放入数组</div><div class="line">                resultArr.push(allXd[i]);</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">        return resultArr;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    console.log(getSilbing(current));</div></pre></td></tr></table></figure>
+</li>
+<li><p>添加子节点：<br>从后面添加：节点.appendChild(传入的节点); 添加的新节点其实是移动过来的。<br>从前面添加：节点.insertBefore(要插入的节点 , 在谁之前); 将节点插入到子节点中指定节点的前面。<br>注意：一定是父节点去调用方法，操作的都是子节点。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line">   //html代码：</div><div class="line">&lt;div id=&quot;box&quot; class=&quot;box&quot;&gt;</div><div class="line">   	&lt;p&gt;我是已经存在的&lt;/p&gt;</div><div class="line"></div><div class="line">&lt;/div&gt;</div><div class="line">&lt;div class=&quot;box&quot;&gt;</div><div class="line">   	&lt;p id=&quot;text&quot;&gt;我是新的p&lt;/p&gt;</div><div class="line">&lt;/div&gt;</div><div class="line">&lt;button id=&quot;btn&quot;&gt;按钮&lt;/button&gt;</div><div class="line"></div><div class="line">//script代码：</div><div class="line">    var box = document.getElementById(&quot;box&quot;);</div><div class="line">   var btn = document.getElementById(&quot;btn&quot;);</div><div class="line">   //要插入的节点</div><div class="line">   var text = document.getElementById(&quot;text&quot;);</div><div class="line">   //已经存在的节点</div><div class="line">   var cunzai = box.children[0];</div><div class="line">   //    添加子节点</div><div class="line">   //    node.appendChild(传入的节点);</div><div class="line">   btn.onclick = function () &#123;</div><div class="line">       //从后面插入节点</div><div class="line">       box.appendChild(text);</div><div class="line">       //从cunzai前面插入节点</div><div class="line">       box.insertBefore(text,cunzai);</div><div class="line">   &#125;;</div></pre></td></tr></table></figure>
+</li>
+<li><p>创建节点的方式：<br>1、document.createElement(“div”);<br>2、box.innerHTML = <code>“&lt;div\&gt;&lt;/div&gt;”;</code><br>3、document.write<code>(“&lt;br&gt;”);</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">//html代码：</div><div class="line">&lt;div id=&quot;box&quot;&gt;&lt;/div&gt;</div><div class="line"></div><div class="line">var box = document.getElementById(&quot;box&quot;);</div><div class="line"> //创建一个元素节点 - 标签</div><div class="line">var newBox = c;</div><div class="line">//创建的元素需要添加到页面中的一个位置才能显示</div><div class="line">box.appendChild(newBox);</div></pre></td></tr></table></figure>
 </li>
 </ul>
 </li>
-<li><p>滑入与滑出</p>
+</ul>
+<pre><code>* 删除节点：
+父节点.removeChild(子节点)；需要父节点调用removeChild()方法。
+
+* 克隆节点：
+节点.cloneNode(参数)
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">   //html代码：</div><div class="line">   &lt;div id=&quot;box&quot;&gt;</div><div class="line">   	我是父节点</div><div class="line">   &lt;span&gt;我是span&lt;/span&gt;</div><div class="line">&lt;/div&gt;</div><div class="line">   </div><div class="line">   //script代码：</div><div class="line">    var box = document.getElementById(&quot;box&quot;);</div><div class="line">   //参数为true，可以复制标签和内部的所有内容</div><div class="line">   var newNode = box.cloneNode(true);</div><div class="line"></div><div class="line">   //如果参数为false只复制当前标签，而不会复制内部的内容</div><div class="line">   var newNode = box.cloneNode(false);</div><div class="line"></div><div class="line">   //将新节点放入到body中</div><div class="line">   document.body.appendChild(newNode);</div></pre></td></tr></table></figure>
+
+* 替换节点：
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line">   //html代码：</div><div class="line">   &lt;div id=&quot;box&quot;&gt;</div><div class="line">   &lt;p id=&quot;text&quot;&gt;我是原始的p标签&lt;/p&gt;</div><div class="line">   </div><div class="line">   //script代码：</div><div class="line">    var box = document.getElementById(&quot;box&quot;);</div><div class="line">   var p = document.getElementById(&quot;text&quot;);</div><div class="line"></div><div class="line">   //创建一个新的标签</div><div class="line">   var newP = document.createElement(&quot;p&quot;);</div><div class="line">//    box.appendChild(newP);</div><div class="line">   newP.innerHTML = &quot;我是新的p标签&quot;;</div><div class="line"></div><div class="line">   //替换节点时，第一个参数为新的节点，第二个是替换的节点（这个节点必须是子节点）</div><div class="line">   box.replaceChild(newP, p);</div><div class="line"></div><div class="line">   //替换掉的节点不存在与页面中，但是也没有被删除，可以继续使用</div><div class="line">   console.log(p);</div><div class="line">   box.appendChild(p);</div><div class="line">&lt;/div&gt;</div></pre></td></tr></table></figure>
+</code></pre><ul>
+<li><p>节点的三大属性：<br>  每个节点都有三个属性，nodeType 用于获取节点的类型，获取结果是一个数值：<br>  1为元素节点 2为属性节点  3为文本节点。</p>
 <ul>
-<li>滑入<code>slideUp)</code>滑出<code>slideDown)</code>一组动画，效果与卷帘门类似<br><code>slideUp/slideDown,</code>用方法与<code>how/hide</code>本一致。</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">   slideUp(speed, callback);</div><div class="line">//speed(可选)：动画的执行时间</div><div class="line">//如果不传，默认为normal，注意区分show/hide。</div><div class="line">//毫秒值(比如1000),动画在1000毫秒执行完成(推荐)</div><div class="line">  	//固定字符串，slow(200)、normal(400)、fast(600)</div><div class="line">//callback(可选):执行完动画后执行的回调函数</div><div class="line">       </div><div class="line">   //滑出切换</div><div class="line">$(selector).slideToggle(speed,callback);</div><div class="line">//如果是隐藏状态，那么执行slideDown操作，如果是显示状态，那么执行	slideUp操作。</div></pre></td></tr></table></figure>
-<ul>
-<li><code>slideUp/slideDown：</code>改的是元素的<code>height</code>;</li>
-</ul>
-</li>
-<li><p>淡入与淡出</p>
-<ul>
-<li><p><code>fadeIn/fadeOut</code>使用方法与<code>show/hide、slideDown/slideUp</code>一致。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">   fadeIn(speed, callback);</div><div class="line"><span class="comment">//speed(可选)：动画的执行时间</span></div><div class="line"><span class="comment">// 1.如果不传，默认是normal。</span></div><div class="line"> <span class="comment">//2.毫秒值(比如1000),动画在1000毫秒执行完成(推荐)</span></div><div class="line">  	<span class="comment">//3.固定字符串，slow(200)、normal(400)、fast(600)</span></div><div class="line"><span class="comment">//callback(可选):执行完动画后执行的回调函数</span></div><div class="line"><span class="comment">//淡入淡出切换：</span></div><div class="line">fadeToggle(speed, callback);</div><div class="line"><span class="comment">//如果当前元素处于隐藏状态，那么执行fadeIn操作，如果处于显示状态，那么执行	fadeOut操作。</span></div></pre></td></tr></table></figure>
-</li>
-<li><p>淡入淡出到某个值(fadeTo)与淡入淡出的区别：淡入淡出只能控制元素的不透明度从 完全不透明 到完全透明；而fadeTo可以指定元素不透明度的具体值。并且时间参数是必需的！</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">   fadeTo(speed, value, callback)<span class="comment">//可以设置具体的透明度</span></div><div class="line"><span class="comment">//speed（必须）</span></div><div class="line"><span class="comment">//value  0-1之间的数值(比如0.4)，表示淡到某一个值。</span></div><div class="line"><span class="comment">//callback(可选) 回调函数</span></div></pre></td></tr></table></figure>
-</li>
-<li><p>fade系列方法：修改的是元素的<code>opacity;</code></p>
+<li>nodeName 节点名：元素节点的节点名就是标签名。</li>
+<li>nodeValue 节点值：元素节点没有节点值，值为null。</li>
+<li>属性的操作：当我们在行内设置自定义属性时，无法通过标签.属性的形式直接获取。<br>使用节点.getAttribute(“属性名”)获取属性<br>使用节点.setAttribute(“属性名”,”新的属性值”)设置属性<br>节点.removeAttribute(“属性名”) 可以移出指定属性<br>注意：通过上面的方式获取的结果只是属性，而不是属性节点，想要获取属性节点使用   节点.getAttributeNode(“属性名”);获取到的节点的节点值相当于getAttribute获取的值。所以我们一般不是用属性节点进行操作。<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">   &lt;div id=&quot;box&quot;&gt;</div><div class="line">   	&lt;span&gt;我是span&lt;/span&gt;</div><div class="line">&lt;/div&gt;</div><div class="line">   </div><div class="line">   var box = document.getElementById(&quot;box&quot;);</div><div class="line"></div><div class="line">   //元素节点的节点类型</div><div class="line">   console.log(box.nodeType);	//1</div><div class="line"></div><div class="line">   //获取一个文本节点</div><div class="line">   console.log(box.firstChild);	//#text</div><div class="line">   //查看文本节点的节点类型</div><div class="line">   console.log(box.firstChild.nodeType);	//3</div><div class="line"></div><div class="line">   //节点名 nodeName</div><div class="line">   console.log(box.nodeName);	//DIV</div><div class="line"></div><div class="line">   //元素节点的节点值</div><div class="line">   console.log(box.nodeValue);		//null</div></pre></td></tr></table></figure>
 </li>
 </ul>
 </li>
-<li>动画总结：<br>1.jQuery给我们提供了三组动画，show/hide、slideUp/slideDown、fadeIn/fadeOut<br>2.动画切换方法：slideToggle、fadeToggle，注意：show和hide没有切换的方法。<br>3.淡入淡出到某个值：fadeTo方法。<br>4.show/slideDown/fadeIn三个是显示效果、hide/slideUp/fadeOut三个是隐藏效果。<br>5.show/hide修改的是元素的height,width,opacity。slide系列方法修改的是元素的height。fade系列方法修改的是元素的opacity。这三种方法修改的这些值，都是带数字的，因为带了数字才能做渐变。</li>
-</ul>
-<h6 id="jQuery自定义动画"><a href="#jQuery自定义动画" class="headerlink" title="jQuery自定义动画"></a>jQuery自定义动画</h6><ul>
-<li><p>animate：自定义动画</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">$(selector).animate(&#123;params&#125;,[speed],[callback]);</div><div class="line"><span class="comment">// &#123;params&#125;：要执行动画的CSS属性，带数字（必选）</span></div><div class="line"><span class="comment">// speed：执行动画时长（可选）</span></div><div class="line"><span class="comment">// callback：动画执行完后立即执行的回调函数（可选）</span></div></pre></td></tr></table></figure>
+<li><p>随机数计算<br>  Math.random()  [0,1)<br>  如果想要获取任意两个数之间的随机数：<br>  例如：236-463 先计算差，然后用Math.random()*差 + 第一个数。</p>
 </li>
-<li><p>动画支持的属性：    </p>
-<ul>
-<li><a href="http://www.w3school.com.cn/jquery/effect_animate.asp" target="_blank" rel="external">http://www.w3school.com.cn/jquery/effect_animate.asp</a></li>
-</ul>
-</li>
-<li>easing参数<br>控制动画在不同元素的速度，默认为“swing”<br>“swing”：在开头和结尾移动慢，在中间移动速度快<br>“linear”：匀速移动</li>
-<li>动画队列问题<ul>
-<li>在同一个元素上执行多个动画，那么对于这个动画来说，后面的动画会被放到动画队列中，等前面的动画执行完成了才会执行;</li>
-</ul>
-</li>
-<li>停止动画<ul>
-<li>stop方法：停止动画效果<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">stop(clearQueue, jumpToEnd);</div><div class="line"><span class="comment">//第一个参数：是否清除队列</span></div><div class="line"><span class="comment">//第二个参数：是否跳转到最终效果</span></div></pre></td></tr></table></figure>
-</li>
-</ul>
-</li>
-</ul>
-<ul>
-<li>最常用的停止动画：stop();</li>
 </ul>
 
       
@@ -351,13 +333,13 @@ show方法详解：
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/2016/10/20/jQuery动画/">jQuery动画</a></p>
+        <p><span>本文标题:</span><a href="/2016/10/25/节点/">节点</a></p>
         <p><span>文章作者:</span><a href="/" title="访问 weihong Liao 的个人博客">weihong Liao</a></p>
-        <p><span>发布时间:</span>2016年10月20日 - 09时49分</p>
-        <p><span>最后更新:</span>2016年10月24日 - 21时19分</p>
+        <p><span>发布时间:</span>2016年10月25日 - 20时59分</p>
+        <p><span>最后更新:</span>2016年10月28日 - 21时59分</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2016/10/20/jQuery动画/" title="jQuery动画">http://yoursite.com/2016/10/20/jQuery动画/</a>
-            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2016/10/20/jQuery动画/　　作者: weihong Liao" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <span>原始链接:</span><a class="post-url" href="/2016/10/25/节点/" title="节点">http://yoursite.com/2016/10/25/节点/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2016/10/25/节点/　　作者: weihong Liao" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script src="/js/clipboard.min.js"></script>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
@@ -370,18 +352,18 @@ show方法详解：
 
 <nav id="article-nav">
   
-    <a href="/2016/10/20/函数/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2016/10/26/字符串/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption"><</strong>
       <div class="article-nav-title">
         
-          函数
+          字符串
         
       </div>
     </a>
   
   
-    <a href="/2016/10/19/jQuery事件/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">jQuery事件</div>
+    <a href="/2016/10/24/BOM/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">BOM</div>
       <strong class="article-nav-caption">></strong>
     </a>
   
@@ -392,7 +374,7 @@ show方法详解：
 
     <div id="toc" class="toc-article">
     <strong class="toc-title">文章目录</strong>
-    <ol class="toc"><li class="toc-item toc-level-6"><a class="toc-link" href="#jQuery自定义动画"><span class="toc-number">1.</span> <span class="toc-text">jQuery自定义动画</span></a></li></ol>
+    
 </div>
 <input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
 
@@ -440,7 +422,7 @@ show方法详解：
     
       <div class="duoshuo" id="comments">
     <!-- 多说评论框 start -->
-    <div class="ds-thread" data-thread-key="2016/10/20/jQuery动画/" data-title="jQuery动画" data-url="http://yoursite.com/2016/10/20/jQuery动画/"></div>
+    <div class="ds-thread" data-thread-key="2016/10/25/节点/" data-title="节点" data-url="http://yoursite.com/2016/10/25/节点/"></div>
     <!-- 多说评论框 end -->
     <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
     <script type="text/javascript">
@@ -463,13 +445,13 @@ show方法详解：
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2016/10/20/函数/" title="上一篇: 函数">
+            <a href="/2016/10/26/字符串/" title="上一篇: 字符串">
                 <i class="fa fa-angle-left"></i>
             </a>
         
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
         
-            <a href="/2016/10/19/jQuery事件/" title="下一篇: jQuery事件">
+            <a href="/2016/10/24/BOM/" title="下一篇: BOM">
                 <i class="fa fa-angle-right"></i>
             </a>
         
